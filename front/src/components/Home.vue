@@ -1,0 +1,978 @@
+<template>
+  <div class="bg-blue-700">
+    <div
+      class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+        <div class="flex flex-col mb-5 sm:text-center sm:mb-0">
+          <a href="/" class="mb- sm:mx-auto">
+            <div class="flex items-center justify-center w-12 h-12">
+              <img src="/assets/logo.svg" alt="logo du site" />
+            </div>
+          </a>
+          <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <h2
+              class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto"
+            >
+              <span class="relative inline-block">
+                <svg
+                  viewBox="0 0 52 24"
+                  fill="currentColor"
+                  class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                >
+                  <defs>
+                    <pattern
+                      id="700c93bf-0068-4e32-aafe-ef5b6a647708"
+                      x="0"
+                      y="0"
+                      width=".135"
+                      height=".30"
+                    >
+                      <circle cx="1" cy="1" r=".7"></circle>
+                    </pattern>
+                  </defs>
+                  <rect
+                    fill="url(#700c93bf-0068-4e32-aafe-ef5b6a647708)"
+                    width="52"
+                    height="24"
+                  ></rect>
+                </svg>
+                <span class="relative">FredGruweDev.com</span>
+              </span>
+            </h2>
+            <p class="text-base text-indigo-100 md:text-lg">Développeur Full Stack</p>
+          </div>
+          <!-- <div>
+              <a
+                href="/"
+                class="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none"
+              >
+                Get started
+              </a>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- template a propos -->
+
+  <div
+    id="propos"
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div class="lg:pr-10">
+        <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+        </a>
+        <h5 class="mb-4 text-4xl font-extrabold leading-none">
+          Un développeur passionné<br class="hidden md:block" />
+          <span class="inline-block text-blue-accent-700">à votre service</span>
+        </h5>
+        <p class="mb-6 text-gray-900">
+          Le code est ma passion, j'ai décidé d'en faire mon métier. Récemment diplômé du titre de
+          développeur Web et Web Mobile, j'ai participé à plusieurs projets professionels dont
+          "Happli", l'application des buralistes et "Nicolas Peltier Photographie", solution
+          e-commerce de vente de photographies.
+        </p>
+        <p class="mb-6 text-gray-900">
+          Je suis actuellement en formation de Concepteur Développeur d'Applications à la recherche
+          d'un stage non-rémunéré.
+        </p>
+        <!-- <p class="mb-6 text-gray-1200">Mon objectif final serait d'obtenir le titre d'expert Full Stack</p> -->
+        <hr class="mb-5 border-gray-300" />
+        <div class="flex items-center space-x-4">
+          <!-- <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+              <path
+                d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+              ></path>
+            </svg>
+          </a> -->
+        </div>
+      </div>
+      <div>
+        <img
+          class="object-fill w-full h-56 rounded shadow-lg sm:h-96"
+          src="/assets/images/perso.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div>
+        <p
+          class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400"
+        >
+          Ce que je vous propose
+        </p>
+      </div>
+      <h2
+        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+      >
+        <span class="relative inline-block">
+          <svg
+            viewBox="0 0 52 24"
+            fill="currentColor"
+            class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+          >
+            <defs>
+              <pattern
+                id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
+                x="0"
+                y="0"
+                width=".135"
+                height=".30"
+              >
+                <circle cx="1" cy="1" r=".7"></circle>
+              </pattern>
+            </defs>
+            <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+          </svg>
+          <span class="relative">Une</span>
+        </span>
+        prestation de service sur mesure, adaptée à vos besoins
+      </h2>
+      <p class="text-base text-gray-700 md:text-lg">Frameworks principaux :</p>
+    </div>
+    <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img
+              class="logo w-full h-full"
+              src="/assets/vuejs-icon.svg"
+              alt="logo du framework vueJS"
+            />
+            <img
+              class="logo2 opacity-0"
+              src="/assets/vuejs-icon.svg"
+              alt="logo du framework vueJS"
+            />
+          </div>
+          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+              <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
+            </div> -->
+          <h6 class="title mb-2 font-semibold leading-5">VueJS3</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Le FrameWork Front-end que j'affectionne particulièrement. Utilisé avec Vite, ça va
+            franchement très vite !
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img class="logo w-full h-full" src="/assets/react.svg" alt="logo du framework vueJS" />
+            <img class="logo2 opacity-0" src="/assets/react.svg" alt="logo du framework vueJS" />
+          </div>
+          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+              <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
+            </div> -->
+          <h6 class="title mb-2 font-semibold leading-5">ReactJs</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            L'incontournable React, que l'on ne présente plus ! Même s'il s'agit plus d'une
+            bibliothèque que d'un framework, il se démarque par sa flexibilité et ses performances.
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img
+              class="logo w-full h-full"
+              src="/assets/react-native.svg"
+              alt="logo du framework vueJS"
+            />
+            <img
+              class="logo2 opacity-0"
+              src="/assets/react-native.svg"
+              alt="logo du framework vueJS"
+            />
+          </div>
+          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+              <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
+            </div> -->
+          <h6 class="title mb-2 font-semibold leading-5">React Native</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Le framework qui permet de créer des applications mobiles. C'est du react, mais avec les
+            features natives des plateformes mobiles !
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img
+              class="logo w-full h-full"
+              src="/assets/flutter.svg"
+              alt="logo du framework vueJS"
+            />
+            <img class="logo2 opacity-0" src="/assets/flutter.svg" alt="logo du framework vueJS" />
+          </div>
+          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+              <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
+            </div> -->
+          <h6 class="title mb-2 font-semibold leading-5">Flutter</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Flutter est un SDK open-source permettant de développer des applications mobiles.
+            Utilise le langage DART.
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img
+              class="logo w-full h-full"
+              src="/assets/symfony.svg"
+              alt="logo du framework symfony"
+            />
+            <img
+              class="logo2 opacity-0"
+              src="/assets/symfony.svg"
+              alt="logo du framework symfony"
+            />
+          </div>
+          <h6 class="title mb-2 font-semibold leading-5">Symfony ( PHP )</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Symfony est un framework Backend codé en PHP. Basé sur l'architecture MVC, il permet de
+            développer des applications web puissantes.
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img class="logo w-full h-full" src="/assets/express.svg" alt="logo de node" />
+            <img class="logo2 opacity-0" src="/assets/express.svg" alt="logo de node" />
+          </div>
+          <h6 class="title mb-2 font-semibold leading-5">Express ( Javascript )</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Express permet de concevoir rapidement des serveurs sécurisés ainsi qu'une architecture
+            backend robuste.
+          </p>
+        </div>
+      </div>
+      <div
+        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm bg-slate-50 overflow-hidden transition duration-1000 hover:bg-slate-200"
+      >
+        <div>
+          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+            <img class="logo w-full h-full" src="/assets/django.svg" alt="logo de Django" />
+            <img class="logo2 opacity-0" src="/assets/django.svg" alt="logo de Django" />
+          </div>
+          <h6 class="title mb-2 font-semibold leading-5">Django ( Python )</h6>
+          <p class="text mb-3 text-sm text-gray-900">
+            Django est la solution idéale pour le développement Web en Python. Et en plus son
+            langage de template twig fait le taf !
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- template projets -->
+
+  <div
+    id="test1"
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+      <h2
+        class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+      >
+        <span class="inline-block mb-1 sm:mb-4"> Mon Portfolio<br class="hidden md:block" /> </span>
+        <div
+          ref="blue_expand_1"
+          id="blue_expand_1"
+          class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+        ></div>
+      </h2>
+      <p class="text-gray-700 lg:text-sm lg:max-w-md">
+        Mes Projets personnels et professionels ont permis la validation de mes acquis en plus de
+        monter en compétences sur divers technologies.
+      </p>
+      <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
+    </div>
+    <div class="relative container-projets">
+      <div
+        ref="projets1"
+        id="projets1"
+        class="w-full md:w-full lg:w-full relative grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 mx-auto"
+      >
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/npp-cover.png"
+            alt="image de présentation de snaparadise"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-2 sm:mb-4 text-lg font-bold text-gray-100">snaparadise.com</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 sm:mb-4">
+              Dernier projet en date, actuellement en cours de développement. Il s'agit d'un
+              marketPlace destiné à la vente de photographies.
+            </p>
+            <!-- <p class="text-xs tracking-wide text-gray-300 ">
+                Nicolas Peltier Photographie sera le premier à en bénéficier
+              </p> -->
+            <a
+              aria-label="view item"
+              href="https://snaparadise.com"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-5"
+              >Voir le site</a
+            >
+            <div class="flex flex-row">
+              <p class="flex items-center font-semibold text-pink-400 md:mt-2 mr-3">Github :</p>
+              <a
+                aria-label="view item"
+                href="https://github.com/jahfredW/npp_front_06"
+                target="_blank"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2 mr-5"
+                >Front</a
+              >
+              <a
+                aria-label="view item"
+                href="https://github.com/jahfredW/npp_back_end_06"
+                target="_blank"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+                >Back</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-fill w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/boldaircover.png"
+            alt="photo de couverture de boldAir"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="md:mb-4 text-lg font-bold text-gray-100">Bold'air</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-5">
+              Le but de cette application, développée sous architecture " couteau suisse" est de
+              fournir un état détaillé de la pollution en cours, En plus de permettre aux usagers de
+              signaler une "incommodation".
+            </p>
+            <!-- <p class="text-xs tracking-wide text-gray-300">
+                Le Backend est codé en Python, les repuêtes en API sont gérées avec FastApi tandis que le front est mis en place avec VueJs
+              </p> -->
+            <a
+              aria-label="view item"
+              href="https://github.com/jahfredW/Bold_Air"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >Lien GitHub</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/images/fredgruwe.png"
+            alt="photo de couverture de fgdev"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="md:mb-4 text-lg font-bold text-gray-100">fredGruweDev.com</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300">
+              Sous ses apparences de site vitrine, il s'agit d'une application full-stack qui
+              démontre ma capacité à développer à l'aide du framework VueJS3 côté front et NodeJs
+              côté Backend.
+            </p>
+            <a
+              aria-label="view item"
+              href="https://express.fredgruwedev.com"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-5"
+              >Voir le site</a
+            >
+            <div class="flex flex-row">
+              <p class="flex items-center font-semibold text-pink-400 md:mt-2 mr-3">Github :</p>
+              <a
+                aria-label="view item"
+                href="https://github.com/jahfredW/front_4.0"
+                target="_blank"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2 mr-5"
+                >Front</a
+              >
+              <a
+                aria-label="view item"
+                href="https://github.com/jahfredW/back_4.0"
+                target="_blank"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+                >Back</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/obr.png"
+            alt="image de présentation de snaparadise"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">obr-plomberie</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-4 mb-2">
+              Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
+              prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
+            </p>
+            <a
+              aria-label="View Item"
+              href="https://obr-plomberie.fr"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-2"
+              >Voir le site</a
+            >
+            <a
+              aria-label="View Item"
+              href="https://github.com/jahfredW/obr"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+              >Lien Github</a
+            >
+            <!-- <p class="text-xs tracking-wide text-gray-300 ">
+                Nicolas Peltier Photographie sera le premier à en bénéficier
+              </p> -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-if="showProject2"
+        ref="projets2"
+        id="projets2"
+        class="w-full absolute grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2"
+      >
+        <!-- <div v-if="showProject2" ref="projets2" id="projets2" class="w-full absolute grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 justify-center"> -->
+
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-fill w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/scrappy.png"
+            alt="photo de couverture de boldAir"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">Scrappy Cooker</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-5">
+              Il s'agit d'une petite application anti-gaspi de scrapping, codée en python, qui
+              permet de concevoir des recettes de cuisine avec ce qu'il vous reste dans le
+              réfrigérateur ! ;)
+            </p>
+            <a
+              href="https://github.com/jahfredW/cooking_project_v2"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >Lien github</a
+            >
+            <!-- <p class="text-xs tracking-wide text-gray-300">
+                Le Backend est codé en Python, les repuêtes en API sont gérées avec FastApi tandis que le front est mis en place avec VueJs
+              </p> -->
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-fill w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/audio.png"
+            alt="photo de couverture de fgdev"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">Audio Converter</p>
+            <p class="text-sm tracking-wide text-gray-300">
+              Un convertisseur audio codé en Python en utilisant le pattern design factory.
+            </p>
+            <a
+              href="https://github.com/jahfredW/Audio_converteur"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >Lien github</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/codingame.svg"
+            alt="couverture de l'application parc finder"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">CodinGame</p>
+            <p class="text-sm tracking-wide text-gray-300">
+              Je vous parle des puzzles que j'ai pu réussir, ainsi que ma certification Python.
+            </p>
+            <a
+              href="https://www.codingame.com/profile/f2a708aef3b3e45220e3bda15f3f064f5107834"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >Lien vers Codingame</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/parcFinder.png"
+            alt="couverture de l'application parc finder"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">Parc Finder</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300">
+              Vous vous ennuyez chez vous avec vos enfants un dimanche après midi ? Parc Finder se
+              charge de vous trouver le parc de jeu pour enfants gratuit le plus proche de chez vous
+              !
+            </p>
+            <router-link
+              link
+              to="/about"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >A venir</router-link
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button
+        @click="test"
+        ref="seeMore"
+        class="see-more-projects inline-flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
+      >
+        Voir plus +
+      </button>
+    </div>
+  </div>
+
+  <!-- technos -->
+
+  <div
+    id="technos"
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden"
+  >
+    <h2
+      class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+    >
+      <span class="inline-block mb-1 sm:mb-4">
+        Technologies<br class="hidden md:block" />
+        utilisées
+      </span>
+      <div
+        ref="blue_expand_2"
+        id="blue_expand_two"
+        class="h-1 ml-auto duration-300 origin-left bg-blue-accent-700 scale-x-30 transform"
+      ></div>
+    </h2>
+    <div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
+      <div style="z-index: 999" class="flex flex-row justify-evenly">
+        <button
+          ref="languages"
+          id="languages_show"
+          @click="check_tech($event)"
+          class="block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 hover:scale-110 hover:bg-blue-500 hover:text-white transition transition ease-in-out"
+        >
+          langages
+        </button>
+        <p
+          ref="frameworks"
+          id="frameworks_show"
+          @click="check_tech($event)"
+          class="block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 hover:scale-110 hover:bg-blue-500 hover:text-white transition transition ease-in-out hover:cursor-pointer"
+        >
+          frameworks
+        </p>
+        <p
+          ref="other"
+          id="other_show"
+          @click="check_tech($event)"
+          class="hover:cursor-pointer block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 hover:scale-110 hover:bg-blue-500 hover:text-white transition transition ease-in-out"
+        >
+          autres
+        </p>
+      </div>
+      <div v-if="languages_show" class="my-12">
+        <Languages></Languages>
+      </div>
+      <div v-if="frameworks_show" class="my-12">
+        <FrameWorks></FrameWorks>
+      </div>
+      <div v-if="other_show" class="my-12">
+        <Others></Others>
+      </div>
+    </div>
+    <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+      <h2
+        class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+      >
+        <span class="inline-block mb-1 sm:mb-4"> Contact<br class="hidden md:block" /> </span>
+        <div
+          ref="blue_expand_1"
+          id="blue_expand_1"
+          class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+        ></div>
+      </h2>
+      <p class="text-gray-700 lg:text-sm lg:max-w-md">
+        Laissez moi votre email et votre message. Je ne manquerai pas de vous répondre.
+      </p>
+      <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
+    </div>
+    <div class="max-w-md mx-auto shadow-xl rounded px-3 py-5">
+      <ContactForm></ContactForm>
+    </div>
+  </div>
+
+  <!-- connaissances -->
+</template>
+
+<script setup>
+import { onMounted, ref } from 'vue'
+import FrameWorks from './Frameworks.vue'
+import Languages from './Languages.vue'
+import Others from './Others.vue'
+import ContactForm from './SimpleContact.vue'
+
+const frameworks_show = ref(false)
+const languages_show = ref(false)
+const other_show = ref(false)
+
+const frameworks = ref(null)
+const languages = ref(null)
+const other = ref(null)
+
+const blue_expand_1 = ref(null)
+const blue_expand_2 = ref(null)
+
+import { checkScreenSize } from '@/composables/screen.js'
+
+const { isDesktop } = checkScreenSize()
+
+onMounted(() => {
+  // Commencer l'observation de l'élément
+  if (languages.value) {
+    observer.observe(languages.value)
+    observer.observe(frameworks.value)
+  }
+  if (blue_expand_1.value) {
+    observer.observe(blue_expand_1.value)
+    observer.observe(blue_expand_2.value)
+  }
+
+  // projets2.value.style.transform= 'translateX(-120%)';
+  // projets2.value.style.transform= 'translateY(-120%)';
+})
+
+const callback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // L'élément est visible à l'écran
+      console.log(entry.target.id)
+      switch (entry.target.id) {
+        case 'languages_show':
+          if (!frameworks_show.value && !other_show.value) {
+            languages_show.value = true
+            languages.value.classList.remove('bg-teal-accent-400')
+            languages.value.classList.add('bg-black')
+            languages.value.classList.add('text-white')
+          }
+
+          break
+        case 'blue_expand_1':
+          console.log('expand-1 visibel')
+          blue_expand_1.value.style.transform = 'scale(100%)'
+          break
+        case 'blue_expand_two':
+          console.log('ici')
+          blue_expand_2.value.style.transform = 'scale(100%)'
+          break
+      }
+
+      // Vous pouvez effectuer ici toutes les actions que vous voulez lorsque l'élément est visible
+      // Par exemple, appeler la fonction test() ou effectuer des animations, etc.
+      // test();
+    } else {
+      // L'élément n'est plus visible à l'écran
+
+      console.log("L'élément n'est plus visible !")
+      switch (entry.target.id) {
+        // case "languages_show":
+        //   languages_show.value = false;
+        //   languages.value.classList.add('bg-teal-accent-400');
+        //   languages.value.classList.remove('bg-black');
+        //   languages.value.classList.remove('text-white');
+        //   break;
+        case 'blue_expand_1':
+          console.log('expand_1 plus visible!')
+          blue_expand_1.value.style.transform = 'scale(20%)'
+          break
+        case 'blue_expand_two':
+          blue_expand_2.value.style.transform = 'scale(20%)'
+          break
+      }
+    }
+  })
+}
+
+const observer = new IntersectionObserver(callback)
+
+const showProject2 = ref(false)
+const projets1 = ref(null)
+const projets2 = ref(null)
+const seeMore = ref(null)
+
+const test = () => {
+  console.log(projets1.value)
+
+  if (seeMore.value.innerText == 'Voir plus +') {
+    seeMore.value.textContent = 'Voir Moins -'
+
+    showProject2.value = true
+
+    console.log(isDesktop.value)
+
+    // permet d'attendre que la dernière animation est terminée
+    // équivaut à un setTimeOut avec une avleur de 0 ms
+    requestAnimationFrame(() => {
+      projets1.value.style.transform = 'translateX(-150%)'
+      projets1.value.style.opacity = '0'
+      projets1.value.style.transition = 'transform 1s ease, opacity 2s ease'
+      projets2.value.style.opacity = '0'
+
+      if (isDesktop.value) {
+        projets2.value.style.transform = 'translateY(-110%)'
+      } else {
+        projets2.value.style.transform = 'translateY(-105%)'
+      }
+      projets2.value.style.opacity = '100'
+      projets2.value.style.transition = 'opacity 1s ease , transform 1s ease '
+    }, 0)
+  } else {
+    requestAnimationFrame(() => {
+      projets1.value.style.transform = 'translateX(0)'
+      projets1.value.style.opacity = '100'
+      projets1.value.style.transition = 'transform 1s ease, opacity 2s ease'
+      projets2.value.style.opacity = '0'
+
+      if (isDesktop.value) {
+        projets2.value.style.transform = 'translateY(+210%)'
+      } else {
+        projets2.value.style.transform = 'translateY(+205%)'
+      }
+      projets2.value.style.transition = 'opacity 1s ease, transform 1s ease'
+    })
+    seeMore.value.textContent = 'Voir plus +'
+    showProject2.value = true
+  }
+}
+
+const class_init = () => {
+  const sections = [frameworks, languages, other]
+  sections.forEach((section) => {
+    section.value.classList.remove('bg-black', 'text-white')
+    section.value.classList.add('bg-teal-accent-400')
+  })
+}
+
+const check_tech = (event) => {
+  switch (event.target.id) {
+    case 'frameworks_show':
+      class_init()
+
+      frameworks.value.classList.remove('bg-teal-accent-400')
+      frameworks.value.classList.add('text-white')
+      frameworks.value.classList.add('bg-black')
+
+      frameworks_show.value = true
+      languages_show.value = false
+      other_show.value = false
+      break
+    case 'languages_show':
+      class_init()
+
+      languages.value.classList.remove('bg-teal-accent-400')
+      languages.value.classList.add('bg-black')
+      languages.value.classList.add('text-white')
+      languages_show.value = true
+      frameworks_show.value = false
+      other_show.value = false
+      break
+    case 'other_show':
+      class_init()
+
+      other.value.classList.remove('bg-teal-accent-400')
+      other.value.classList.add('bg-black')
+      other.value.classList.add('text-white')
+
+      languages_show.value = false
+      frameworks_show.value = false
+      other_show.value = true
+      break
+  }
+}
+</script>
+
+<style>
+/* Définition des styles de base pour l'effet de transition */
+
+/* #projets2{
+  transform: translateY(-110%);
+} */
+
+.see-more-project:active #projets {
+  transform: translateX(-100%);
+}
+
+.target {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.logo {
+  transform: translateX(150%) translateY(+100%) scale(2);
+  transition: transform 1s ease;
+}
+
+.title {
+  transform: translateX(-100%);
+  transition: transform 1s ease;
+}
+
+.text {
+  transform: translateY(+500%);
+  transition: transform 1s ease;
+}
+
+/* Définition des styles pour l'effet de transformation lors du survol */
+
+.test:hover .logo {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: -50;
+  transform: translateX(-50%) translateY(0) scale(0.8);
+  transition: transform 1s ease, opacity 2s ease, visibility 2s ease;
+  pointer-events: none;
+}
+
+.test:hover .logo2 {
+  opacity: 100;
+  transform: translateX(0) translateY(0) scale(1);
+  transition: opacity 2s ease;
+}
+
+.test:hover .title {
+  transform: translateX(0);
+}
+
+.test:hover .text {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1000px) {
+  /* Définition des styles de base pour l'effet de transition */
+  .logo {
+    transform: translateX(200%) translateY(100%) scale(2);
+    transition: transform 1s ease;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /* Définition des styles de base pour l'effet de transition */
+  .logo {
+    transform: translateX(180%) translateY(100%) scale(2);
+    transition: transform 1s ease;
+  }
+}
+
+@media screen and (min-width: 396px) and (max-width: 415px) {
+  /* Définition des styles de base pour l'effet de transition */
+  .logo {
+    transform: translateX(220%) translateY(100%) scale(2);
+    transition: transform 1s ease;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 394px) {
+  /* Définition des styles de base pour l'effet de transition */
+  .logo {
+    transform: translateX(190%) translateY(90%) scale(2);
+    transition: transform 1s ease;
+  }
+}
+</style>
+
+// const symfo = ref(); // const symfoLogo = ref(null); // const text = ref(null); // // on récupére
+l'évènement et la target associée // const test = (event) => { // const target = event.target; //
+const logo = target.children[0].children[0]; // const title = target.children[0].children[1]; //
+const text = target.children[0].children[2]; // // const second =
+event.target.secondElementChild.secondElementChild; // console.log(logo, text), // //
+symfoLogo.value.style // target.style.cursor = 'pointer'; // if(logo.style.transform ==
+'scale(0.8)'){ // logo.style.transform = 'translateX(150%) translateY(+100%) scale(2)'; //
+title.style.transform = 'translateX(-100%)'; // text.style.transform = 'translateY(+150%) '; // }
+else { // logo.style.transform = 'scale(0.8)'; // title.style.transform = 'translateX(0)'; //
+text.style.transform = 'translateY(0)'; // } // logo.style.transition = "transform 1s ease"; //
+text.style.transition = "transform 1s ease"; // title.style.transition = "transform 1s ease"; // }
+// const test = (event) => { // console.log(event.target) // }
