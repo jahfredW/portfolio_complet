@@ -6,12 +6,16 @@ import router from '@/router'
 /* ce module défini la configuration initiale de axios, 
 et paramètre le header */
 
+const isDev = process.env.NODE_ENV === 'development'
+
+const baseURL = isDev ? 'https://localhost:8000' : 'https://backend.fredgruwedev.com'
+
 const Axios = axios.create({
-  // baseURL: 'https://fredgruwedev.com'
-  baseURL: 'https://localhost:8000',
+  baseURL: baseURL,
+  //   baseURL: 'https://localhost:8000',
   // baseURL : 'https://70bd-2a01-e0a-849-4580-30a9-f4a2-18c9-6c6e.ngrok-free.app',
   // headers: {'X-Custom-Header': 'foobar'},
-  withCredentials: true
+  withCredentials: false
 })
 
 axios.defaults.headers['content-type'] = 'application/json'

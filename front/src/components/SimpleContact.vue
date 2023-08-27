@@ -179,6 +179,15 @@ const rules = {
 
 const v$ = useVuelidate(rules, state)
 
+// reset de validation
+const resetValidation = () => {
+  for (const key in v$) {
+    if (v$[key].$dirty !== undefined) {
+      v$[key].$reset()
+    }
+  }
+}
+
 // soumission de la validation et requete AJAX
 const submitForm = () => {
   v$.value
@@ -193,6 +202,9 @@ const submitForm = () => {
             fadeOut(boxAlertSuccess)
           }, 2000)
           console.log(response)
+
+          Object.assign(state, initialState)
+          resetValidation()
         } catch (error) {
           fadeIn(boxAlertFail)
           setTimeout(() => {

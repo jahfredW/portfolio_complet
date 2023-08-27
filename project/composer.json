@@ -11,6 +11,7 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.16",
+        "gesdinet/jwt-refresh-token-bundle": "^1.1",
         "lexik/jwt-authentication-bundle": "^2.19",
         "nelmio/cors-bundle": "^2.3",
         "phpdocumentor/reflection-docblock": "^5.3",
@@ -23,6 +24,7 @@
         "symfony/framework-bundle": "6.3.*",
         "symfony/property-access": "6.3.*",
         "symfony/property-info": "6.3.*",
+        "symfony/requirements-checker": "^2.0",
         "symfony/runtime": "6.3.*",
         "symfony/security-bundle": "6.3.*",
         "symfony/serializer": "6.3.*",
@@ -60,7 +62,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "requirements-checker": "script"
         },
         "post-install-cmd": [
             "@auto-scripts"

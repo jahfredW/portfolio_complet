@@ -1,11 +1,10 @@
 <template>
-    <div class="bg-gray-900">
+  <div class="bg-gray-900">
     <div
-      class="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+      id="wrapper-header"
+      class="mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
     >
-      <div
-        class="relative flex items-center justify-between lg:justify-center lg:space-x-16"
-      >
+      <div class="z-30 relative flex items-center justify-between lg:justify-center lg:space-x-16">
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
             <router-link
@@ -28,15 +27,10 @@
             >
           </li>
         </ul>
-        <a
-          href="/"
-          aria-label="Company"
-          title="Company"
-          class="inline-flex items-center"
-        ><img src="/assets/logo.svg" alt="logo du site">
-          <span
-            class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
-            >FredGruweDev.com</span
+        <a href="/" aria-label="Company" title="Company" class="inline-flex items-center"
+          ><img src="/assets/logo.svg" alt="logo du site" />
+          <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+            >FredGruweDev</span
           >
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -64,8 +58,8 @@
           <button
             aria-label="Open Menu"
             title="Open Menu"
-            class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-            @click="isMenuOpen = true"
+            class="p-2 transition duration-200 focus:outline-none focus:shadow-outline"
+            @click="openMenu"
           >
             <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
               <path
@@ -86,25 +80,19 @@
             <div class="p-5 bg-white border rounded shadow-sm">
               <div class="flex items-center justify-between mb-4">
                 <div>
-                  <a
-                    href="/"
-                    aria-label="Company"
-                    title="Company"
-                    class="inline-flex items-center"
-                  >
-                    <img src="/assets/logo.svg" alt="logo de fredGruweDev">
-                    <span
-                      class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
+                  <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                    <img src="/assets/logo.svg" alt="logo de fredGruweDev" />
+                    <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
                       >FredGruweDev</span
                     >
                   </a>
                 </div>
-                <div>
+                <div class="z-30">
                   <button
                     aria-label="Close Menu"
                     title="Close Menu"
-                    class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                    @click="isMenuOpen = false"
+                    class="transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    @click="closeMenu"
                   >
                     <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
                       <path
@@ -123,7 +111,7 @@
                       @click="scrollToElement('#test1')"
                       aria-label="Our product"
                       title="Our product"
-                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      class="text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Porfolio</router-link
                     >
                   </li>
@@ -133,7 +121,7 @@
                       @click="scrollToElement('#technos')"
                       aria-label="Our product"
                       title="Our product"
-                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      class="text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Technos</router-link
                     >
                   </li>
@@ -143,15 +131,16 @@
                       @click="scrollToElement('#propos')"
                       aria-label="Product pricing"
                       title="Product pricing"
-                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >A propos</router-link>
+                      class="text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >A propos</router-link
+                    >
                   </li>
                   <li>
                     <a
                       href="mailto:fred.gruwe@gmail.com"
                       aria-label="About us"
                       title="About us"
-                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      class="text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Contact</a
                     >
                   </li>
@@ -165,54 +154,72 @@
   </div>
   <RouterView />
   <div class="relative mt-16 bg-blue-700">
-    <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-blue-700" preserveAspectRatio="none" viewBox="0 0 1440 54">
-      <path fill="currentColor" d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"></path>
+    <svg
+      class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-blue-700"
+      preserveAspectRatio="none"
+      viewBox="0 0 1440 54"
+    >
+      <path
+        fill="currentColor"
+        d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
+      ></path>
     </svg>
     <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="flex flex-col sm:flex-row justify-evenly mb-5">
         <div>
           <div class="flex flex-row justify-center">
             <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
-            <img src="/assets/logo.svg" alt="logo de fredGruweDev.com">
-            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">FredGruweDev</span>
-          </a>
+              <img src="/assets/logo.svg" alt="logo de fredGruweDev.com" />
+              <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+                >FredGruweDev</span
+              >
+            </a>
           </div>
         </div>
         <div class="my-4 lg:max-w-sm">
-            <p class="text-sm text-center text-deep-purple-50">
-              Ceci est un site vitrine, il ne représente en aucun cas une quelconque activité professionelle.
-            </p>
-          </div>
-        
+          <p class="text-sm text-center text-deep-purple-50">
+            Ceci est un site vitrine, il ne représente en aucun cas une quelconque activité
+            professionelle.
+          </p>
+        </div>
       </div>
-      <div class=" pt-5 pb-10 border-t border-blue-200">
+      <div class="pt-5 pb-10 border-t border-blue-200">
         <p class="text-sm text-center text-gray-100">
           © Copyright 2023 FredGruweDev.com Inc. All rights reserved.
         </p>
-        
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
-import { ref } from 'vue';
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { scrollTo } from 'vue-scrollto';
+import { scrollTo } from 'vue-scrollto'
 
-const isMenuOpen = ref(false);
+const isMenuOpen = ref(false)
+
+const openMenu = () => {
+  isMenuOpen.value = true
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
 
 const scrollToElement = (id) => {
-      scrollTo(id, 500, {
-        offset: +2, // Décalage pour ajuster la position après le défilement
-      });
-    }
-
+  scrollTo(id, 500, {
+    offset: +2 // Décalage pour ajuster la position après le défilement
+  })
+}
 </script>
 
-<style scoped>
+<style>
+#wrapper-header {
+  padding: 10px;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;

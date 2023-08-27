@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\OpenApi\Model;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
 use App\Repository\ContactRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -35,7 +37,19 @@ use Symfony\Component\Validator\Constraints as Assert;
                     ]
                 ]
             )
+                                ),
+        new Get(
+            security: "is_granted('ROLE_ADMIN')", securityMessage: 'Only admins get Contacts.',
+            normalizationContext: ['groups' => ['read:contact']],
+        ),
+        new GetCollection(
+            security: "is_granted('ROLE_ADMIN')", securityMessage: 'Only admins get Contacts.',
+            normalizationContext: ['groups' => ['read:contact']],
+            openapiContext: [
+                "security" => [['JWT' => []]]
+            ]
         )
+
     ]
 )]
 #[ORM\HasLifecycleCallbacks]
