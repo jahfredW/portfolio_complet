@@ -43,5 +43,5 @@ coverage
 
 .env
 
-./project/.env
-./front/.env
+/project/.env
+/front/.env
