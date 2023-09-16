@@ -6,6 +6,12 @@ const messagePost = (credentials) => {
   return Axios.post(url, credentials, { headers: { 'Content-Type': 'application/json' } })
 }
 
+const messageRead = () => {
+  let url = 'api/contacts'
+  return Axios.get(url)
+}
+
 export const messageService = {
-  messagePost
+  messagePost,
+  messageRead
 }

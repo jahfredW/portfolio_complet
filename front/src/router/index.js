@@ -27,6 +27,11 @@ const router = createRouter({
           path: 'login',
           name: 'login',
           component: LoginVue
+        },
+        {
+          path: 'messages',
+          name: 'messages',
+          component: () => import('../views/admin/Messages.vue')
         }
       ]
     }
