@@ -45,9 +45,9 @@ use Symfony\Component\Validator\Constraints as Assert;
         new GetCollection(
             // security: "is_granted('ROLE_ADMIN')", securityMessage: 'Only admins get Contacts.',
             normalizationContext: ['groups' => ['read:contact']],
-            // openapiContext: [
-            //     "security" => [['JWT' => []]]
-            // ]
+            openapiContext: [
+                "security" => [['JWT' => []]]
+            ]
         )
 
     ]

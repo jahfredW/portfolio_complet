@@ -320,10 +320,6 @@
           class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
         ></div>
       </h2>
-      <p class="text-gray-700 lg:text-sm lg:max-w-md">
-        Mes Projets personnels et professionels ont permis la validation de mes acquis en plus de
-        monter en compétences sur divers technologies.
-      </p>
       <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
     </div>
     <div class="relative container-projets">
@@ -449,32 +445,31 @@
             </div>
           </div>
         </div>
+        <!-- 1947 -->
         <div
           class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
         >
           <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/obr.png"
+            class="object-fil w-full h-56 md:h-64 xl:h-80"
+            src="/assets/1947.png"
             alt="image de présentation de snaparadise"
           />
           <div
             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
           >
-            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">obr-plomberie</p>
+            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">1947</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-4 mb-2">
-              Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
-              prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
+              Shooter en cours de développement qui implémente des pattern design. Codé en
+              TypeScript et en sass.
             </p>
-            <a
-              aria-label="View Item"
-              href="https://obr-plomberie.fr"
-              target="_blank"
+            <router-link
+              :to="{ name: '1947' }"
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-2"
-              >Voir le site</a
+              >En savoir plus</router-link
             >
             <a
               aria-label="View Item"
-              href="https://github.com/jahfredW/obr"
+              href="https://github.com/jahfredW/1947"
               target="_blank"
               class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
               >Lien Github</a
@@ -527,23 +522,35 @@
           class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
         >
           <img
-            class="object-fill w-full h-56 md:h-64 xl:h-80 opacity-90"
-            src="/assets/audio.png"
-            alt="photo de couverture de fgdev"
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/obr.png"
+            alt="image de présentation de snaparadise"
           />
           <div
             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">Audio Converter</p>
-            <p class="text-sm tracking-wide text-gray-300">
-              Un convertisseur audio codé en Python en utilisant le pattern design factory.
+            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">obr-plomberie</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-4 mb-2">
+              Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
+              prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
             </p>
             <a
-              href="https://github.com/jahfredW/Audio_converteur"
+              aria-label="View Item"
+              href="https://obr-plomberie.fr"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >Lien github</a
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-2"
+              >Voir le site</a
             >
+            <a
+              aria-label="View Item"
+              href="https://github.com/jahfredW/obr"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+              >Lien Github</a
+            >
+            <!-- <p class="text-xs tracking-wide text-gray-300 ">
+                Nicolas Peltier Photographie sera le premier à en bénéficier
+              </p> -->
           </div>
         </div>
         <div
@@ -675,9 +682,7 @@
           class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
         ></div>
       </h2>
-      <p class="text-gray-700 lg:text-sm lg:max-w-md">
-        Laissez moi votre email et votre message. Je ne manquerai pas de vous répondre.
-      </p>
+
       <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
     </div>
     <div class="max-w-md mx-auto shadow-xl rounded px-3 py-5">

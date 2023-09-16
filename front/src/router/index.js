@@ -16,6 +16,11 @@ const router = createRouter({
           path: 'snaparadise',
           name: 'snaparadise',
           component: () => import('../views/Snaparadise.vue')
+        },
+        {
+          path: '1947',
+          name: '1947',
+          component: () => import('../views/1947.vue')
         }
       ]
     },
