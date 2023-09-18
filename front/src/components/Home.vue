@@ -313,7 +313,8 @@
       <h2
         class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
       >
-        <span class="inline-block mb-1 sm:mb-4"> Mon Portfolio<br class="hidden md:block" /> </span>
+        <span class="inline-block mb-1 sm:mb-4">Mon Portfolio<br class="hidden md:block" /> </span>
+        
         <div
           ref="blue_expand_1"
           id="blue_expand_1"
@@ -580,24 +581,21 @@
           class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
         >
           <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
-            src="/assets/parcFinder.png"
-            alt="couverture de l'application parc finder"
+            class="object-fil w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/poleo3.png"
+            alt="couverture de l'application poleo"
           />
           <div
             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">Parc Finder</p>
+            <p class="mb-4 text-lg font-bold text-gray-100">Poleo</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300">
-              Vous vous ennuyez chez vous avec vos enfants un dimanche après midi ? Parc Finder se
-              charge de vous trouver le parc de jeu pour enfants gratuit le plus proche de chez vous
-              !
+              Application React qui permet de connaitre les relevés de pollution instantannée de sa ville. 
             </p>
-            <router-link
-              link
-              to="/about"
+            <a
+              href="https://poleo.fredgruwedev.com/"
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >A venir</router-link
+              >Voir le site</a
             >
           </div>
         </div>
