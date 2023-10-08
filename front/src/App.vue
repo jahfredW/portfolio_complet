@@ -30,7 +30,7 @@
         <a href="/" aria-label="Company" title="Company" class="inline-flex items-center"
           ><img src="/assets/logo.svg" alt="logo du site" />
           <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
-            >FredGruweDev</span
+            >Frédéric Gruwé</span
           >
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -45,12 +45,13 @@
             >
           </li>
           <li>
-            <a
-              href="mailto:fred.gruwe@gmail.com"
-              aria-label="Sign up"
-              title="Sign up"
+            <router-link
+              :to="{ name: 'home' }"
+              @click="scrollToElement('#contact')"
+              aria-label="Contact"
+              title="contact Form"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-              >Contact</a
+              >Contact</router-link
             >
           </li>
         </ul>
@@ -136,12 +137,13 @@
                     >
                   </li>
                   <li>
-                    <a
-                      href="mailto:fred.gruwe@gmail.com"
-                      aria-label="About us"
-                      title="About us"
+                    <router-link
+                      :to="{ name: 'home' }"
+                      @click="scrollToElement('#contact')"
+                      aria-label="Contact"
+                      title="contact Form"
                       class="text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >Contact</a
+                      >Contact</router-link
                     >
                   </li>
                 </ul>
@@ -195,7 +197,6 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import { scrollTo } from 'vue-scrollto'
 
 const isMenuOpen = ref(false)

@@ -1,18 +1,13 @@
 <template>
-  <div class="bg-blue-700">
+  <div v-if="isDesktop" class="bg-blue-700">
     <div
       class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
     >
-      <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-        <div class="flex flex-col mb-5 sm:text-center sm:mb-0">
-          <a href="/" class="mb- sm:mx-auto">
-            <div class="flex items-center justify-center w-12 h-12">
-              <img src="/assets/logo.svg" alt="logo du site" />
-            </div>
-          </a>
-          <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div>
+        <div class="grid grid-cols-12">
+          <div class="col-span-4">
             <h2
-              class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto"
+              class="text-center max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto"
             >
               <span class="relative inline-block">
                 <svg
@@ -37,10 +32,18 @@
                     height="24"
                   ></rect>
                 </svg>
-                <span class="relative">FredGruweDev.com</span>
+                <span class="relative">Frédéric Gruwé</span>
               </span>
             </h2>
-            <p class="text-base text-indigo-100 md:text-lg">Développeur Full Stack</p>
+          </div>
+
+          <div v-if="isDesktop" class="col-span-4 flex justify-center items-center">
+            <img class="rounded-full shadow-lg md:h-96 h-64" src="/assets/images/moi.jpg" alt="" />
+          </div>
+          <div class="col-span-4 text-base md:text-lg flex flex-col justify-end">
+            <div class="text-center text-white text-2xl font-bold">
+              &lt Concepteur - Développeur /&gt
+            </div>
           </div>
           <!-- <div>
               <a
@@ -57,78 +60,306 @@
   <!-- template a propos -->
 
   <div
+    v-if="!isDesktop"
     id="propos"
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
-    <div class="grid gap-10 lg:grid-cols-2">
-      <div class="lg:pr-10">
-        <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
-          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
+    <div class="grid gap-10 lg:grid-cols-2 flex-col justify-center">
+      <div class="flex justify-center items-center">
+        <img class="rounded-full shadow-lg md:h-96 h-64" src="/assets/images/moi.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div
+    v-if="!isDesktop"
+    class="h-1 ml-auto duration-500 transform bg-blue-accent-700 scale-x-30"
+  ></div>
+
+  <!-- ***************************************************************************************************************************************** -->
+  <div
+    class="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-5 md:mt-20"
+  >
+    <div class="max-w-xl mb-15 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2
+        class="text-center max-w-lg mb-6 font-sans text-xl font-bold leading-none tracking-tight text-blue-700 sm:text-4xl md:mx-auto"
+      >
+        <span class="relative inline-block">
+          <svg
+            viewBox="0 0 52 24"
+            fill="currentColor"
+            class="absolute top-0 left-0 z-0 hidden w-16 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+          >
+            <defs>
+              <pattern
+                id="1d4040f3-9f3e-4ac7-b117-7d4009658ced"
+                x="0"
+                y="0"
+                width=".135"
+                height=".30"
+              >
+                <circle cx="1" cy="1" r=".7"></circle>
+              </pattern>
+            </defs>
+            <rect fill="url(#1d4040f3-9f3e-4ac7-b117-7d4009658ced)" width="52" height="24"></rect>
+          </svg>
+          <span>Comment puis-je vous aider ?</span>
+        </span>
+      </h2>
+    </div>
+    <div class="grid gap-10 sm:grid-cols-1 lg:grid-cols-3">
+      <div>
+        <div
+          @mouseenter="testEnter"
+          @mouseleave="displayP"
+          class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
+          <div v-if="!isDesktop" class="absolute inset-0 bg-black bg-opacity-70"></div>
+          <div v-if="isDesktop" ref="aideDev" class="absolute bg-black-500 top-0 h-20 w-full">
+            <div class="bg-black bg-opacity-75 w-full h-full flex justify-center items-center">
+              <p class="font-bold text-white tracking-wide px-5">Développement full stack.</p>
+            </div>
           </div>
-        </a>
-        <h5 class="mb-4 text-4xl font-extrabold leading-none">
-          Un développeur passionné<br class="hidden md:block" />
-          <span class="inline-block text-blue-accent-700">à votre service</span>
-        </h5>
-        <p class="mb-6 text-gray-900">
-          Le code est ma passion, j'ai décidé d'en faire mon métier. Récemment diplômé du titre de
-          développeur Web et Web Mobile, j'ai participé à plusieurs projets professionels dont
-          "Happli", l'application des buralistes et "Nicolas Peltier Photographie", solution
-          e-commerce de vente de photographies.
-        </p>
-        <p class="mb-6 text-gray-900">
-          Je suis actuellement en formation de Concepteur Développeur d'Applications à la recherche
-          d'un stage non-rémunéré.
-        </p>
-        <!-- <p class="mb-6 text-gray-1200">Mon objectif final serait d'obtenir le titre d'expert Full Stack</p> -->
-        <hr class="mb-5 border-gray-300" />
-        <div class="flex items-center space-x-4">
-          <!-- <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-              <path
-                d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-              ></path>
-            </svg>
-          </a> -->
+
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/perso.jpg"
+            alt="Person"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center"
+            :class="{
+              'transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
+          >
+            <p class="mb-5 text-lg font-bold text-gray-100">Développement web Full stack</p>
+            <p class="mb-5 text-xs text-gray-100">
+              Vous recherchez un développeur full stack avec des compétences en Python (Django), PHP
+              (Symfony) C# ( .NET) et/ou React / Vue.js ?
+            </p>
+            <p class="mb-4 text-xs tracking-wide text-gray-400">
+              Prenons rendez-vous pour Discuter de votre projet.
+            </p>
+            <div v-if="!isDesktop" class="pt-2 flex justify-center w-1/2 md:w-1/4 mx-auto">
+              <button
+                @click="redirectToRendezVous"
+                type="submit"
+                class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-50 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                  />
+                </svg>
+                <span class="ml-2 text-center">PRENDRE RDV</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div>
-        <img
-          class="object-fill w-full h-56 rounded shadow-lg sm:h-96"
-          src="/assets/images/perso.jpg"
-          alt=""
-        />
+        <div
+          @mouseenter="testEnter"
+          @mouseleave="displayP"
+          class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
+          <div v-if="!isDesktop" class="absolute inset-0 bg-black bg-opacity-70"></div>
+          <div v-if="isDesktop" ref="aideDev" class="absolute bg-black-500 top-0 h-20 w-full">
+            <div class="bg-black bg-opacity-75 w-full h-full flex justify-center items-center">
+              <p class="font-bold text-white tracking-wide px-5">Renforcement de vos équipes..</p>
+            </div>
+          </div>
+
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/devteam.jpg"
+            alt="Person"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center"
+            :class="{
+              'transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
+          >
+            <p class="mb-5 text-lg font-bold text-gray-100">Renforcement de vos équipes.</p>
+            <p class="mb-5 text-xs text-gray-100">
+              Vous recherchez à compléter votre équipe avec un développeur capable de s'adapter
+              rapidement ?
+            </p>
+            <p class="mb-4 text-xs tracking-wide text-gray-400">
+              Prenons rendez-vous pour Discuter de votre projet.
+            </p>
+            <div v-if="!isDesktop" class="pt-2 flex justify-center w-1/2 md:w-1/4 mx-auto">
+              <button
+                @click="redirectToRendezVous"
+                type="submit"
+                class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-50 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                  />
+                </svg>
+                <span class="ml-2 text-center">PRENDRE RDV</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          @mouseenter="testEnter"
+          @mouseleave="displayP"
+          class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
+          <div v-if="!isDesktop" class="absolute inset-0 bg-black bg-opacity-70"></div>
+          <div v-if="isDesktop" ref="aideDev" class="absolute bg-black-500 top-0 h-20 w-full">
+            <div class="bg-black bg-opacity-75 w-full h-full flex justify-center items-center">
+              <p class="font-bold text-white tracking-wide px-5">
+                Conception - Développement de Projets
+              </p>
+            </div>
+          </div>
+
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/dev.jpg"
+            alt="Person"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center"
+            :class="{
+              'transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
+          >
+            <p class="mb-5 text-lg font-bold text-gray-100">
+              Conception - Développement de Projets
+            </p>
+            <p class="mb-5 text-xs text-gray-100">
+              De la conception à la réalisation de vos projets les plus complexes, je suis prêt à
+              investir mes compétences dans des domaines variés, web et web-mobile.
+            </p>
+            <p class="mb-4 text-xs tracking-wide text-gray-400">
+              Prenons rendez-vous pour Discuter de votre projet.
+            </p>
+            <div v-if="!isDesktop" class="pt-2 flex justify-center w-1/2 md:w-1/4 mx-auto">
+              <button
+                @click="redirectToRendezVous"
+                type="submit"
+                class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-50 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                  />
+                </svg>
+                <span class="ml-2 text-center">PRENDRE RDV</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+    <div v-if="isDesktop" class="pt-4 mt-10 flex justify-center w-1/2 md:w-1/4 mx-auto">
+      <button
+        @click="redirectToRendezVous"
+        type="submit"
+        class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-50 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+          />
+        </svg>
+        <span class="ml-2 text-center">Prendre rendez-vous</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="propos" class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:w-1/2 md:px-24 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-1 flex-col justify-center">
+      <div class="p-10 flex items-center justify-center">
+        <div class="flex-col justify-center">
+          <hr class="mb-6 border-gray-300" />
+          <h5 class="mb-4 text-4xl font-extrabold leading-none">
+            Un développeur passionné<br class="hidden md:block" />
+            <span class="inline-block text-blue-accent-700">à votre service</span>
+          </h5>
+          <p class="mb-6 text-gray-900">
+            De formation scientifique, j'ai exercé prendant vingt ans en laboratoire de Police
+            Technique et Scientifique, au cours desquels j'ai occupé plusieurs postes à
+            reponsabilité. Tout au long de ce parcours j'ai été amené à me former en autodidacte sur
+            le métier du <strong>développement informatique</strong> ( processus d'automatisation et
+            analyse de données). J'ai ensuite consolidé mes
+            <span class="text-blue-accent-700"><strong>compétences</strong></span> en suivant le
+            programme <span class="text-blue-accent-700"><strong>Vivre du Code</strong></span
+            >, avant d'obtenir le titre pro de
+            <span class="text-blue-accent-700"><strong>Développeur Web et Web Mobile</strong></span>
+          </p>
+          <p class="mb-6 text-gray-900">
+            Je suis actuellement en formation de
+            <span class="text-blue-accent-700"
+              ><strong>Concepteur Développeur d'Applications</strong></span
+            >
+            à la recherche d'un stage non-rémunéré du 26/02/2024 au 24/05/2024.
+          </p>
+          <!-- <p class="mb-6 text-gray-1200">Mon objectif final serait d'obtenir le titre d'expert Full Stack</p> -->
+          <hr class="border-gray-300" />
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- ********************************************************************************************************************************************* -->
   <div
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-      <div>
-        <p
-          class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400"
-        >
-          Ce que je vous propose
-        </p>
-      </div>
       <h2
-        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+        class="max-w-lg mb-5 text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
       >
         <span class="relative inline-block">
           <svg
@@ -149,11 +380,20 @@
             </defs>
             <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
           </svg>
-          <span class="relative">Une</span>
+          <h2
+            class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+          >
+            <span class="inline-block mb-1 sm:mb-4"
+              >Mes technologies favorites<br class="hidden md:block" />
+            </span>
+            <div
+              ref="blue_expand_1"
+              id="blue_expand_1"
+              class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+            ></div>
+          </h2>
         </span>
-        prestation de service sur mesure, adaptée à vos besoins
       </h2>
-      <p class="text-base text-gray-700 md:text-lg">Frameworks principaux :</p>
     </div>
     <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
       <div
@@ -310,16 +550,42 @@
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-      <h2
-        class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
-      >
-        <span class="inline-block mb-1 sm:mb-4"> Mon Portfolio<br class="hidden md:block" /> </span>
-        <div
-          ref="blue_expand_1"
-          id="blue_expand_1"
-          class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
-        ></div>
-      </h2>
+      <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-5 text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+        >
+          <span class="relative inline-block">
+            <svg
+              viewBox="0 0 52 24"
+              fill="currentColor"
+              class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+            >
+              <defs>
+                <pattern
+                  id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
+                  x="0"
+                  y="0"
+                  width=".135"
+                  height=".30"
+                >
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+            </svg>
+            <h2
+              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+            >
+              <span class="inline-block mb-1 sm:mb-4"
+                >Mon Portfolio<br class="hidden md:block" />
+              </span>
+              <div
+                class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+              ></div>
+            </h2>
+          </span>
+        </h2>
+      </div>
       <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
     </div>
     <div class="relative container-projets">
@@ -619,22 +885,43 @@
 
   <div
     id="technos"
-    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden"
+    class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden"
   >
     <h2
-      class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+      class="max-w-lg text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
     >
-      <span class="inline-block mb-1 sm:mb-4">
-        Technologies<br class="hidden md:block" />
-        utilisées
+      <span class="relative inline-block">
+        <svg
+          viewBox="0 0 52 24"
+          fill="currentColor"
+          class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+        >
+          <defs>
+            <pattern
+              id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
+              x="0"
+              y="0"
+              width=".135"
+              height=".30"
+            >
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+        </svg>
+        <h2
+          class="max-w-lg mb-10 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+        >
+          <span class="inline-block mb-1 sm:mb-4">
+            technologies<br class="hidden md:block" />
+          </span>
+          <div
+            class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+          ></div>
+        </h2>
       </span>
-      <div
-        ref="blue_expand_2"
-        id="blue_expand_two"
-        class="h-1 ml-auto duration-300 origin-left bg-blue-accent-700 scale-x-30 transform"
-      ></div>
     </h2>
-    <div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
+    <div class="mx-auto lg:max-w-xl sm:text-center">
       <div style="z-index: 999" class="flex flex-row justify-evenly">
         <button
           ref="languages"
@@ -671,21 +958,48 @@
         <Others></Others>
       </div>
     </div>
-    <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+  </div>
+  <div
+    id="contacts"
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden"
+  >
+    <div class="flex flex-col lg:justify-between lg:flex-row">
       <h2
-        class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+        class="max-w-lg text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
       >
-        <span class="inline-block mb-1 sm:mb-4"> Contact<br class="hidden md:block" /> </span>
-        <div
-          ref="blue_expand_1"
-          id="blue_expand_1"
-          class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
-        ></div>
+        <span class="relative inline-block">
+          <svg
+            viewBox="0 0 52 24"
+            fill="currentColor"
+            class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+          >
+            <defs>
+              <pattern
+                id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
+                x="0"
+                y="0"
+                width=".135"
+                height=".30"
+              >
+                <circle cx="1" cy="1" r=".7"></circle>
+              </pattern>
+            </defs>
+            <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+          </svg>
+          <h2
+            class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+          >
+            <span class="inline-block mb-1 sm:mb-4"> Contact<br class="hidden md:block" /> </span>
+            <div
+              class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+            ></div>
+          </h2>
+        </span>
       </h2>
 
       <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
     </div>
-    <div class="max-w-md mx-auto shadow-xl rounded px-3 py-5">
+    <div id="contact" class="max-w-md shadow-xl rounded px-3 py-3 mx-auto">
       <ContactForm></ContactForm>
     </div>
   </div>
@@ -695,10 +1009,13 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
+
 import FrameWorks from './Frameworks.vue'
 import Languages from './Languages.vue'
 import Others from './Others.vue'
 import ContactForm from './SimpleContact.vue'
+
+import { checkScreenSize } from '../composables/screen'
 
 const frameworks_show = ref(false)
 const languages_show = ref(false)
@@ -708,10 +1025,10 @@ const frameworks = ref(null)
 const languages = ref(null)
 const other = ref(null)
 
+const aideDev = ref(null)
+
 const blue_expand_1 = ref(null)
 const blue_expand_2 = ref(null)
-
-import { checkScreenSize } from '@/composables/screen.js'
 
 const { isDesktop } = checkScreenSize()
 
@@ -721,14 +1038,34 @@ onMounted(() => {
     observer.observe(languages.value)
     observer.observe(frameworks.value)
   }
-  if (blue_expand_1.value) {
-    observer.observe(blue_expand_1.value)
-    observer.observe(blue_expand_2.value)
-  }
+  // if (blue_expand_1.value) {
+  //   observer.observe(blue_expand_1.value)
+  //   observer.observe(blue_expand_2.value)
+  // }
 
   // projets2.value.style.transform= 'translateX(-120%)';
   // projets2.value.style.transform= 'translateY(-120%)';
 })
+
+const testEnter = (event) => {
+  console.log(event.target.children[1])
+  event.target.children[1].style.display = 'none'
+}
+
+const displayP = (event) => {
+  event.target.children[1].style.display = 'block'
+}
+
+// const handleClick = (event) => {
+//   console.log(event.target.children)
+
+//   console.log('click')
+//   if (event.target.children[1].style.display == 'block') {
+//     event.target.children[1].style.display = 'none'
+//   } else {
+//     event.target.children[1].style.display = 'block'
+//   }
+// }
 
 const callback = (entries) => {
   entries.forEach((entry) => {
@@ -787,6 +1124,11 @@ const showProject2 = ref(false)
 const projets1 = ref(null)
 const projets2 = ref(null)
 const seeMore = ref(null)
+
+// fonction de redirection vers la prise de rendez-vous
+const redirectToRendezVous = () => {
+  window.open('https://calendly.com/fred-gruwe/30min', '_blank')
+}
 
 const test = () => {
   console.log(projets1.value)
@@ -968,16 +1310,3 @@ const check_tech = (event) => {
   }
 }
 </style>
-
-// const symfo = ref(); // const symfoLogo = ref(null); // const text = ref(null); // // on récupére
-l'évènement et la target associée // const test = (event) => { // const target = event.target; //
-const logo = target.children[0].children[0]; // const title = target.children[0].children[1]; //
-const text = target.children[0].children[2]; // // const second =
-event.target.secondElementChild.secondElementChild; // console.log(logo, text), // //
-symfoLogo.value.style // target.style.cursor = 'pointer'; // if(logo.style.transform ==
-'scale(0.8)'){ // logo.style.transform = 'translateX(150%) translateY(+100%) scale(2)'; //
-title.style.transform = 'translateX(-100%)'; // text.style.transform = 'translateY(+150%) '; // }
-else { // logo.style.transform = 'scale(0.8)'; // title.style.transform = 'translateX(0)'; //
-text.style.transform = 'translateY(0)'; // } // logo.style.transition = "transform 1s ease"; //
-text.style.transition = "transform 1s ease"; // title.style.transition = "transform 1s ease"; // }
-// const test = (event) => { // console.log(event.target) // }
