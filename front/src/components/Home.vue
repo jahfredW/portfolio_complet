@@ -38,7 +38,11 @@
           </div>
 
           <div v-if="isDesktop" class="col-span-4 flex justify-center items-center">
-            <img class="rounded-full shadow-lg md:h-96 h-64" src="/assets/images/moi.jpg" alt="" />
+            <img
+              class="rounded-full shadow-lg md:h-96 h-64 myPhoto"
+              src="/assets/images/moi.jpg"
+              alt="photo de profil"
+            />
           </div>
           <div class="col-span-4 text-base md:text-lg flex flex-col justify-end">
             <div class="text-center text-white text-2xl font-bold">
@@ -106,18 +110,20 @@
         </span>
       </h2>
     </div>
+
+    <!-- carousel test -->
+
+    <!-- carousel test  -->
     <div class="grid gap-10 sm:grid-cols-1 lg:grid-cols-3">
-      <div>
+      <div @mouseenter="testEnter" @mouseleave="displayP">
         <div
-          @mouseenter="testEnter"
-          @mouseleave="displayP"
           class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
         >
           <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
           <div v-if="!isDesktop" class="absolute inset-0 bg-black bg-opacity-70"></div>
           <div v-if="isDesktop" ref="aideDev" class="absolute bg-black-500 top-0 h-20 w-full">
             <div class="bg-black bg-opacity-75 w-full h-full flex justify-center items-center">
-              <p class="font-bold text-white tracking-wide px-5">Développement full stack.</p>
+              <p class="font-bold text-white tracking-wide px-5">Développement full stack</p>
             </div>
           </div>
 
@@ -136,7 +142,7 @@
             <p class="mb-5 text-lg font-bold text-gray-100">Développement web Full stack</p>
             <p class="mb-5 text-xs text-gray-100">
               Vous recherchez un développeur full stack avec des compétences en Python (Django), PHP
-              (Symfony) C# ( .NET) et/ou React / Vue.js ?
+              (Symfony), C# ( .NET) et/ou React / Vue.js ?
             </p>
             <p class="mb-4 text-xs tracking-wide text-gray-400">
               Prenons rendez-vous pour Discuter de votre projet.
@@ -167,17 +173,15 @@
           </div>
         </div>
       </div>
-      <div>
+      <div @mouseenter="testEnter" @mouseleave="displayP">
         <div
-          @mouseenter="testEnter"
-          @mouseleave="displayP"
           class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
         >
           <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
           <div v-if="!isDesktop" class="absolute inset-0 bg-black bg-opacity-70"></div>
           <div v-if="isDesktop" ref="aideDev" class="absolute bg-black-500 top-0 h-20 w-full">
             <div class="bg-black bg-opacity-75 w-full h-full flex justify-center items-center">
-              <p class="font-bold text-white tracking-wide px-5">Renforcement de vos équipes..</p>
+              <p class="font-bold text-white tracking-wide px-5">Renforcement de vos équipes</p>
             </div>
           </div>
 
@@ -193,7 +197,7 @@
                 isDesktop
             }"
           >
-            <p class="mb-5 text-lg font-bold text-gray-100">Renforcement de vos équipes.</p>
+            <p class="mb-5 text-lg font-bold text-gray-100">Renforcement de vos équipes</p>
             <p class="mb-5 text-xs text-gray-100">
               Vous recherchez à compléter votre équipe avec un développeur capable de s'adapter
               rapidement ?
@@ -227,10 +231,8 @@
           </div>
         </div>
       </div>
-      <div>
+      <div @mouseenter="testEnter" @mouseleave="displayP">
         <div
-          @mouseenter="testEnter"
-          @mouseleave="displayP"
           class="relative overflow-hidden transition duration-300 transform rounded-tl-3xl rounded-br-3xl shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
         >
           <div v-if="isDesktop" class="absolute inset-0 bg-white bg-opacity-25"></div>
@@ -255,12 +257,10 @@
                 isDesktop
             }"
           >
-            <p class="mb-5 text-lg font-bold text-gray-100">
-              Conception - Développement de Projets
-            </p>
-            <p class="mb-5 text-xs text-gray-100">
-              De la conception à la réalisation de vos projets les plus complexes, je suis prêt à
-              investir mes compétences dans des domaines variés, web et web-mobile.
+            <p class="mb-5 text-lg font-bold text-gray-100">Réalisation de Projets</p>
+            <p class="mb-3 text-xs text-gray-100">
+              De la conception au développement de vos projets, je suis prêt à investir mes
+              compétences dans des domaines techniques et variés.
             </p>
             <p class="mb-4 text-xs tracking-wide text-gray-400">
               Prenons rendez-vous pour Discuter de votre projet.
@@ -268,7 +268,6 @@
             <div v-if="!isDesktop" class="pt-2 flex justify-center w-1/2 md:w-1/4 mx-auto">
               <button
                 @click="redirectToRendezVous"
-                type="submit"
                 class="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-50 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 <svg
@@ -329,22 +328,23 @@
             <span class="inline-block text-blue-accent-700">à votre service</span>
           </h5>
           <p class="mb-6 text-gray-900">
-            De formation scientifique, j'ai exercé prendant vingt ans en laboratoire de Police
-            Technique et Scientifique, au cours desquels j'ai occupé plusieurs postes à
-            reponsabilité. Tout au long de ce parcours j'ai été amené à me former en autodidacte sur
-            le métier du <strong>développement informatique</strong> ( processus d'automatisation et
-            analyse de données). J'ai ensuite consolidé mes
+            De formation scientifique, j'ai exercé prendant vingt ans en laboratoire Technique et
+            Scientifique, au cours desquels j'ai occupé plusieurs postes à reponsabilité. Tout au
+            long de ce parcours j'ai été amené à me former en autodidacte sur le métier du
+            <strong>développement informatique</strong> ( processus d'automatisation et analyse de
+            données). J'ai ensuite consolidé mes
             <span class="text-blue-accent-700"><strong>compétences</strong></span> en suivant le
             programme <span class="text-blue-accent-700"><strong>Vivre du Code</strong></span
             >, avant d'obtenir le titre pro de
-            <span class="text-blue-accent-700"><strong>Développeur Web et Web Mobile</strong></span>
+            <span class="text-blue-accent-700"
+              ><strong>Développeur Web et Web Mobile.</strong></span
+            >
           </p>
           <p class="mb-6 text-gray-900">
             Je suis actuellement en formation de
             <span class="text-blue-accent-700"
-              ><strong>Concepteur Développeur d'Applications</strong></span
+              ><strong>Concepteur Développeur d'Applications.</strong></span
             >
-            à la recherche d'un stage non-rémunéré du 26/02/2024 au 24/05/2024.
           </p>
           <!-- <p class="mb-6 text-gray-1200">Mon objectif final serait d'obtenir le titre d'expert Full Stack</p> -->
           <hr class="border-gray-300" />
@@ -355,7 +355,7 @@
 
   <!-- ********************************************************************************************************************************************* -->
   <div
-    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    class="px-4 py-16 mt-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2
@@ -384,7 +384,7 @@
             class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
           >
             <span class="inline-block mb-1 sm:mb-4"
-              >Mes technologies favorites<br class="hidden md:block" />
+              >Mes frameworks favoris<br class="hidden md:block" />
             </span>
             <div
               ref="blue_expand_1"
@@ -395,159 +395,333 @@
         </span>
       </h2>
     </div>
-    <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img
-              class="logo w-full h-full"
-              src="/assets/vuejs-icon.svg"
-              alt="logo du framework vueJS"
-            />
-            <img
-              class="logo2 opacity-0"
-              src="/assets/vuejs-icon.svg"
-              alt="logo du framework vueJS"
-            />
-          </div>
-          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+    <!-- carousel -->
+    <div id="default-carousel" class="relative w-full" data-carousel="static">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <!-- Item 1 -->
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full"
+                src="/assets/vuejs-icon.svg"
+                alt="logo du framework vueJS"
+              />
+              <img
+                class="logo2 opacity-0"
+                src="/assets/vuejs-icon.svg"
+                alt="logo du framework vueJS"
+              />
+            </div>
+            <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
               <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
             </div> -->
-          <h6 class="title mb-2 font-semibold leading-5">VueJS3</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Le FrameWork Front-end que j'affectionne particulièrement. Utilisé avec Vite, ça va
-            franchement très vite !
-          </p>
-        </div>
-      </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img class="logo w-full h-full" src="/assets/react.svg" alt="logo du framework vueJS" />
-            <img class="logo2 opacity-0" src="/assets/react.svg" alt="logo du framework vueJS" />
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">VueJS3</h6>
+            <p class="text mb-3 text-sm">
+              Le FrameWork Front-end que j'affectionne particulièrement. Utilisé avec Vite, ça va
+              franchement très vite !
+            </p>
           </div>
-          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+        </div>
+        <!-- Item 2 -->
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full"
+                src="/assets/react.svg"
+                alt="logo du framework vueJS"
+              />
+              <img class="logo2 opacity-0" src="/assets/react.svg" alt="logo du framework vueJS" />
+            </div>
+            <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
               <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
             </div> -->
-          <h6 class="title mb-2 font-semibold leading-5">ReactJs</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            L'incontournable React, que l'on ne présente plus ! Même s'il s'agit plus d'une
-            bibliothèque que d'un framework, il se démarque par sa flexibilité et ses performances.
-          </p>
-        </div>
-      </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img
-              class="logo w-full h-full"
-              src="/assets/react-native.svg"
-              alt="logo du framework vueJS"
-            />
-            <img
-              class="logo2 opacity-0"
-              src="/assets/react-native.svg"
-              alt="logo du framework vueJS"
-            />
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">ReactJs</h6>
+            <p class="text mb-3 text-sm">
+              L'incontournable React, que l'on ne présente plus ! Même s'il s'agit plus d'une
+              bibliothèque que d'un framework, il se démarque par sa flexibilité et ses
+              performances.
+            </p>
           </div>
-          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+        </div>
+        <!-- Item 3 -->
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full"
+                src="/assets/react-native.svg"
+                alt="logo du framework vueJS"
+              />
+              <img
+                class="logo2 opacity-0"
+                src="/assets/react-native.svg"
+                alt="logo du framework vueJS"
+              />
+            </div>
+            <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
               <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
             </div> -->
-          <h6 class="title mb-2 font-semibold leading-5">React Native</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Le framework qui permet de créer des applications mobiles. C'est du react, mais avec les
-            features natives des plateformes mobiles !
-          </p>
-        </div>
-      </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img
-              class="logo w-full h-full"
-              src="/assets/flutter.svg"
-              alt="logo du framework vueJS"
-            />
-            <img class="logo2 opacity-0" src="/assets/flutter.svg" alt="logo du framework vueJS" />
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">
+              React Native
+            </h6>
+            <p class="text mb-3 text-sm">
+              Le framework qui permet de créer des applications mobiles. C'est du react, mais avec
+              les features natives des plateformes mobiles !
+            </p>
           </div>
-          <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+        </div>
+        <!-- Item 4 -->
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full"
+                src="/assets/flutter.svg"
+                alt="logo du framework vueJS"
+              />
+              <img
+                class="logo2 opacity-0"
+                src="/assets/flutter.svg"
+                alt="logo du framework vueJS"
+              />
+            </div>
+            <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
               <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
             </div> -->
-          <h6 class="title mb-2 font-semibold leading-5">Flutter</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Flutter est un SDK open-source permettant de développer des applications mobiles.
-            Utilise le langage DART.
-          </p>
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">Flutter</h6>
+            <p class="text mb-3 text-sm">
+              Flutter est un SDK open-source permettant de développer des applications mobiles.
+              Utilise le langage DART.
+            </p>
+          </div>
+        </div>
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full contrast-boosted"
+                src="/assets/.net.svg"
+                alt="logo du framework vueJS"
+              />
+              <img class="logo2 opacity-0" src="/assets/.net.svg" alt="logo du framework vueJS" />
+            </div>
+            <!-- <div class=" flex items-center justify-center w-16 h-16 mb-4 rounded-full">
+              <img class="logo2 w-full h-full" src="/assets/vuejs-icon.svg" alt="logo du framework vueJS">
+            </div> -->
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">
+              .Net Framework
+            </h6>
+            <p class="text mb-3 text-sm">
+              Microsoft .NET est une plateforme de développement logiciel polyvalente qui prend en
+              charge la création d'applications pour diverses plateformes, notamment Windows, Web,
+              mobile et cloud.
+            </p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full"
+                src="/assets/symfony.svg"
+                alt="logo du framework symfony"
+              />
+              <img
+                class="logo2 opacity-0"
+                src="/assets/symfony.svg"
+                alt="logo du framework symfony"
+              />
+            </div>
+            <h6 class="title mb-3 md:mb-10 font-semibold text-xl md:text-4xl leading-5">
+              Symfony ( PHP )
+            </h6>
+            <p class="text mb-3 text-sm">
+              Symfony est un framework Backend codé en PHP. Basé sur l'architecture MVC, il permet
+              de développer des applications web puissantes.
+            </p>
+          </div>
+        </div>
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img
+                class="logo w-full h-full contrast-boosted"
+                src="/assets/express.svg"
+                alt="logo de node"
+              />
+              <img class="logo2 opacity-0" src="/assets/express.svg" alt="logo de node" />
+            </div>
+            <h6 class="title mb-2 font-semibold leading-5">Express ( Javascript )</h6>
+            <p class="text mb-3 text-sm">
+              Express permet de concevoir rapidement des serveurs sécurisés ainsi qu'une
+              architecture backend robuste.
+            </p>
+          </div>
+        </div>
+        <div
+          class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-neutral-950 transition duration-1000 text-white hover:text-black hover:bg-slate-200 hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <div>
+            <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
+              <img class="logo w-full h-full" src="/assets/django.svg" alt="logo de Django" />
+              <img class="logo2 opacity-0" src="/assets/django.svg" alt="logo de Django" />
+            </div>
+            <h6 class="title mb-2 font-semibold leading-5">Django ( Python )</h6>
+            <p class="text mb-3 text-sm">
+              Django est la solution idéale pour le développement Web en Python. Et en plus son
+              langage de template twig fait le taf !
+            </p>
+          </div>
         </div>
       </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
+
+      <!-- Slider indicators -->
+      <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 5"
+          data-carousel-slide-to="4"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 6"
+          data-carousel-slide-to="5"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 7"
+          data-carousel-slide-to="6"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 8"
+          data-carousel-slide-to="7"
+        ></button>
+      </div>
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
       >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img
-              class="logo w-full h-full"
-              src="/assets/symfony.svg"
-              alt="logo du framework symfony"
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
             />
-            <img
-              class="logo2 opacity-0"
-              src="/assets/symfony.svg"
-              alt="logo du framework symfony"
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
             />
-          </div>
-          <h6 class="title mb-2 font-semibold leading-5">Symfony ( PHP )</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Symfony est un framework Backend codé en PHP. Basé sur l'architecture MVC, il permet de
-            développer des applications web puissantes.
-          </p>
-        </div>
-      </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm overflow-hidden bg-slate-50 transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img class="logo w-full h-full" src="/assets/express.svg" alt="logo de node" />
-            <img class="logo2 opacity-0" src="/assets/express.svg" alt="logo de node" />
-          </div>
-          <h6 class="title mb-2 font-semibold leading-5">Express ( Javascript )</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Express permet de concevoir rapidement des serveurs sécurisés ainsi qu'une architecture
-            backend robuste.
-          </p>
-        </div>
-      </div>
-      <div
-        class="hover:opacity-90 test flex flex-col justify-between p-5 border rounded shadow-sm bg-slate-50 overflow-hidden transition duration-1000 hover:bg-slate-200"
-      >
-        <div>
-          <div class="flex flex-row items-center justify-between w-16 h-16 mb-4 rounded-full">
-            <img class="logo w-full h-full" src="/assets/django.svg" alt="logo de Django" />
-            <img class="logo2 opacity-0" src="/assets/django.svg" alt="logo de Django" />
-          </div>
-          <h6 class="title mb-2 font-semibold leading-5">Django ( Python )</h6>
-          <p class="text mb-3 text-sm text-gray-900">
-            Django est la solution idéale pour le développement Web en Python. Et en plus son
-            langage de template twig fait le taf !
-          </p>
-        </div>
-      </div>
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </div>
+    <!-- endcarousel -->
+    <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
   </div>
   <!-- template projets -->
 
   <div
     id="test1"
-    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    class="px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
       <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -595,7 +769,11 @@
         class="w-full md:w-full lg:w-full relative grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 mx-auto"
       >
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
             class="object-cover w-full h-56 md:h-64 xl:h-80"
@@ -603,9 +781,12 @@
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
+            :class="{
+              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
+            }"
           >
-            <p class="mb-2 sm:mb-4 text-lg font-bold text-gray-100">snaparadise.com</p>
+            <p class="mb-2 sm:mb-4 text-lg font-bold text-gray-100">&lt SNAPARADISE /&gt</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300 sm:mb-4">
               Dernier projet en date, actuellement en cours de développement. Il s'agit d'un
               marketPlace destiné à la vente de photographies.
@@ -617,41 +798,52 @@
               aria-label="view item"
               href="https://snaparadise.com"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-5"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-pink-400 hover:cursor-pointer mt-5"
               >Voir le site</a
             >
             <div class="flex flex-row">
-              <p class="flex items-center font-semibold text-pink-400 md:mt-2 mr-3">Github :</p>
+              <p
+                class="flex items-center font-semibold text-pink-400 hover:text-pink-800 mt-5 mr-3"
+              >
+                Github :
+              </p>
               <a
                 aria-label="view item"
                 href="https://github.com/jahfredW/npp_front_06"
                 target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2 mr-5"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5 mr-5"
                 >Front</a
               >
               <a
                 aria-label="view item"
                 href="https://github.com/jahfredW/npp_back_end_06"
                 target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
                 >Back</a
               >
             </div>
           </div>
         </div>
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
-            class="object-fill w-full h-56 md:h-64 xl:h-80"
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
             src="/assets/images/boldaircover.png"
-            alt="photo de couverture de boldAir"
+            alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
+            }"
           >
-            <p class="md:mb-4 text-lg font-bold text-gray-100">Bold'air</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-5">
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt Bold'air /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-5">
               Le but de cette application, développée sous architecture " couteau suisse" est de
               fournir un état détaillé de la pollution en cours, En plus de permettre aux usagers de
               signaler une "incommodation".
@@ -669,18 +861,26 @@
           </div>
         </div>
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
             src="/assets/images/fredgruwe.png"
-            alt="photo de couverture de fgdev"
+            alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
           >
-            <p class="md:mb-4 text-lg font-bold text-gray-100">fredGruweDev.com</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300">
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt fredGruweDev.com /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
               Sous ses apparences de site vitrine, il s'agit d'une application full-stack qui
               démontre ma capacité à développer à l'aide du framework VueJS3 côté front et NodeJs
               côté Backend.
@@ -689,7 +889,7 @@
               aria-label="view item"
               href="https://express.fredgruwedev.com"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-5"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-5 mb-2"
               >Voir le site</a
             >
             <div class="flex flex-row">
@@ -713,24 +913,32 @@
         </div>
         <!-- 1947 -->
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
-            class="object-fil w-full h-56 md:h-64 xl:h-80"
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
             src="/assets/1947.png"
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
           >
-            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">1947</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-4 mb-2">
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt 1947 /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
               Shooter en cours de développement qui implémente des pattern design. Codé en
               TypeScript et en sass.
             </p>
             <router-link
               :to="{ name: '1947' }"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-2"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
               >En savoir plus</router-link
             >
             <a
@@ -756,17 +964,24 @@
         <!-- <div v-if="showProject2" ref="projets2" id="projets2" class="w-full absolute grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 justify-center"> -->
 
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
-            class="object-fill w-full h-56 md:h-64 xl:h-80"
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
             src="/assets/images/scrappy.png"
-            alt="photo de couverture de boldAir"
+            alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
+            :class="{
+              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
+            }"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">Scrappy Cooker</p>
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt Scrappy Cooker /&gt</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-5">
               Il s'agit d'une petite application anti-gaspi de scrapping, codée en python, qui
               permet de concevoir des recettes de cuisine avec ce qu'il vous reste dans le
@@ -785,18 +1000,25 @@
         </div>
 
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
             class="object-cover w-full h-56 md:h-64 xl:h-80"
             src="/assets/obr.png"
-            alt="image de présentation de snaparadise"
+            alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
+            :class="{
+              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
+            }"
           >
-            <p class="md:mb-4 mb-2 text-lg font-bold text-gray-100">obr-plomberie</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 md:mb-4 mb-2">
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt OBR-plomberie /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
               Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
               prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
             </p>
@@ -804,7 +1026,7 @@
               aria-label="View Item"
               href="https://obr-plomberie.fr"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer md:mt-2"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
               >Voir le site</a
             >
             <a
@@ -820,18 +1042,59 @@
           </div>
         </div>
         <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
         >
           <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
-            src="/assets/codingame.svg"
-            alt="couverture de l'application parc finder"
+            class="object-fill w-full h-56 md:h-64 xl:h-80"
+            src="/assets/images/poleo.png"
+            alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">CodinGame</p>
-            <p class="text-sm tracking-wide text-gray-300">
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt Poleo /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
+              Application en full React qui permet d'obtenir les relévés de pollution en temps réel,
+              où que vous soyez. En cours de développement.
+            </p>
+            <a
+              aria-label="View Item"
+              href="https://poleo.fredgruwedev.com"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
+              >Voir le site</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/codingame.svg"
+            alt="scrappy"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt CodinGame /&gt</p>
+            <p class="text-sm tracking-wide text-gray-300 mb-4">
               Je vous parle des puzzles que j'ai pu réussir, ainsi que ma certification Python.
             </p>
             <a
@@ -842,31 +1105,6 @@
             >
           </div>
         </div>
-        <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
-        >
-          <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80 opacity-90"
-            src="/assets/parcFinder.png"
-            alt="couverture de l'application parc finder"
-          />
-          <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
-          >
-            <p class="mb-4 text-lg font-bold text-gray-100">Parc Finder</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300">
-              Vous vous ennuyez chez vous avec vos enfants un dimanche après midi ? Parc Finder se
-              charge de vous trouver le parc de jeu pour enfants gratuit le plus proche de chez vous
-              !
-            </p>
-            <router-link
-              link
-              to="/about"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >A venir</router-link
-            >
-          </div>
-        </div>
       </div>
     </div>
 
@@ -874,7 +1112,7 @@
       <button
         @click="test"
         ref="seeMore"
-        class="see-more-projects inline-flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
+        class="see-more-projects text-xl font-bold inline-flex items-center transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
       >
         Voir plus +
       </button>
@@ -912,9 +1150,7 @@
         <h2
           class="max-w-lg mb-10 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
         >
-          <span class="inline-block mb-1 sm:mb-4">
-            technologies<br class="hidden md:block" />
-          </span>
+          <span class="inline-block mb-1 sm:mb-4"> Compétences<br class="hidden md:block" /> </span>
           <div
             class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
           ></div>
@@ -1127,7 +1363,7 @@ const seeMore = ref(null)
 
 // fonction de redirection vers la prise de rendez-vous
 const redirectToRendezVous = () => {
-  window.open('https://calendly.com/fred-gruwe/30min', '_blank')
+  window.location.href = 'https://calendly.com/fred-gruwe/30min'
 }
 
 const test = () => {
@@ -1228,6 +1464,10 @@ const check_tech = (event) => {
   transform: translateY(-110%);
 } */
 
+.myPhoto {
+  filter: grayscale(0.3) brightness(1.2);
+}
+
 .see-more-project:active #projets {
   transform: translateX(-100%);
 }
@@ -1276,6 +1516,10 @@ const check_tech = (event) => {
 
 .test:hover .text {
   transform: translateY(0);
+}
+
+.contrast-boosted {
+  filter: invert(100%) contrast(10%) brightness(200%);
 }
 
 @media screen and (max-width: 1000px) {
