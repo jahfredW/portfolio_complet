@@ -724,42 +724,17 @@
     class="px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-      <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <h2
-          class="max-w-lg mb-5 text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
-        >
-          <span class="relative inline-block">
-            <svg
-              viewBox="0 0 52 24"
-              fill="currentColor"
-              class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-            >
-              <defs>
-                <pattern
-                  id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
-                  x="0"
-                  y="0"
-                  width=".135"
-                  height=".30"
-                >
-                  <circle cx="1" cy="1" r=".7"></circle>
-                </pattern>
-              </defs>
-              <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
-            </svg>
-            <h2
-              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
-            >
-              <span class="inline-block mb-1 sm:mb-4"
-                >Mon Portfolio<br class="hidden md:block" />
-              </span>
-              <div
-                class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
-              ></div>
-            </h2>
-          </span>
-        </h2>
-      </div>
+      <h2
+        class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+      >
+        <span class="inline-block mb-1 sm:mb-4">Mon Portfolio<br class="hidden md:block" /> </span>
+
+        <div
+          ref="blue_expand_1"
+          id="blue_expand_1"
+          class="h-1 ml-auto duration-500 origin-left transform bg-blue-accent-700 scale-x-30"
+        ></div>
+      </h2>
       <!-- <router-link link to="/about" class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2">En savoir plus</router-link> -->
     </div>
     <div class="relative container-projets">
@@ -1102,6 +1077,29 @@
               target="_blank"
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
               >Lien vers Codingame</a
+            >
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            class="object-fil w-full h-56 md:h-64 xl:h-80 opacity-90"
+            src="/assets/poleo3.png"
+            alt="couverture de l'application poleo"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">Poleo</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300">
+              Application React qui permet de connaitre les relevés de pollution instantannée de sa
+              ville.
+            </p>
+            <a
+              href="https://poleo.fredgruwedev.com/"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
+              >Voir le site</a
             >
           </div>
         </div>
