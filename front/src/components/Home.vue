@@ -799,6 +799,50 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="relative overflow-hidden rounded"
+          :class="{
+            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
+              isDesktop
+          }"
+        >
+          <img
+            class="object-cover w-full h-56 md:h-64 xl:h-80"
+            src="/assets/1947.png"
+            alt="image de présentation de snaparadise"
+          />
+          <div
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            :class="{
+              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
+                isDesktop
+            }"
+          >
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt 1947 /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
+              Shooter en cours de développement qui implémente des pattern design. Codé en
+              TypeScript et en sass.
+            </p>
+            <a
+              aria-label="view item"
+              href="https://1942.fredgruwedev.com"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-5 mr-5"
+              >Tester le jeu</a
+            >
+            <a
+              aria-label="View Item"
+              href="https://github.com/jahfredW/1947"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
+              >Lien Github</a
+            >
+            <!-- <p class="text-xs tracking-wide text-gray-300 ">
+                Nicolas Peltier Photographie sera le premier à en bénéficier
+              </p> -->
+          </div>
+        </div>
         <div
           class="relative overflow-hidden rounded"
           :class="{
@@ -886,48 +930,8 @@
             </div>
           </div>
         </div>
+
         <!-- 1947 -->
-        <div
-          class="relative overflow-hidden rounded"
-          :class="{
-            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
-              isDesktop
-          }"
-        >
-          <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/1947.png"
-            alt="image de présentation de snaparadise"
-          />
-          <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
-            :class="{
-              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
-                isDesktop
-            }"
-          >
-            <p class="mb-4 text-lg font-bold text-gray-100">&lt 1947 /&gt</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
-              Shooter en cours de développement qui implémente des pattern design. Codé en
-              TypeScript et en sass.
-            </p>
-            <router-link
-              :to="{ name: '1947' }"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
-              >En savoir plus</router-link
-            >
-            <a
-              aria-label="View Item"
-              href="https://github.com/jahfredW/1947"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
-              >Lien Github</a
-            >
-            <!-- <p class="text-xs tracking-wide text-gray-300 ">
-                Nicolas Peltier Photographie sera le premier à en bénéficier
-              </p> -->
-          </div>
-        </div>
       </div>
 
       <div
@@ -1008,7 +1012,7 @@
               aria-label="View Item"
               href="https://github.com/jahfredW/obr"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer md:mt-2"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
               >Lien Github</a
             >
             <!-- <p class="text-xs tracking-wide text-gray-300 ">
@@ -1037,7 +1041,7 @@
           >
             <p class="mb-4 text-lg font-bold text-gray-100">&lt Poleo /&gt</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
-              Application en full React qui permet d'obtenir les relévés de pollution en temps réel,
+              Application en full React qui permet d'obtenir les relevés de pollution en temps réel,
               où que vous soyez. En cours de développement.
             </p>
             <a
@@ -1070,36 +1074,13 @@
           >
             <p class="mb-4 text-lg font-bold text-gray-100">&lt CodinGame /&gt</p>
             <p class="text-sm tracking-wide text-gray-300 mb-4">
-              Je vous parle des puzzles que j'ai pu réussir, ainsi que ma certification Python.
+              Je vous parle des puzzles que j'ai pu réussir, ainsi que de ma certification Python.
             </p>
             <a
               href="https://www.codingame.com/profile/f2a708aef3b3e45220e3bda15f3f064f5107834"
               target="_blank"
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
               >Lien vers Codingame</a
-            >
-          </div>
-        </div>
-        <div
-          class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
-        >
-          <img
-            class="object-fil w-full h-56 md:h-64 xl:h-80 opacity-90"
-            src="/assets/poleo3.png"
-            alt="couverture de l'application poleo"
-          />
-          <div
-            class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-80 opacity-0 hover:opacity-100"
-          >
-            <p class="mb-4 text-lg font-bold text-gray-100">Poleo</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300">
-              Application React qui permet de connaitre les relevés de pollution instantannée de sa
-              ville.
-            </p>
-            <a
-              href="https://poleo.fredgruwedev.com/"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >Voir le site</a
             >
           </div>
         </div>
