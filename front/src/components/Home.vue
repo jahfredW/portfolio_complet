@@ -808,8 +808,8 @@
           }"
         >
           <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/1947.png"
+            class="object-fit w-full h-56 md:h-64 xl:h-80"
+            src="/assets/1942.png"
             alt="image de présentation de snaparadise"
           />
           <div
@@ -819,10 +819,10 @@
                 isDesktop
             }"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">&lt 1947 /&gt</p>
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt 1942 /&gt</p>
             <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
-              Shooter en cours de développement qui implémente des pattern design. Codé en
-              TypeScript et en sass.
+              Shooter en cours de développement qui implémente des pattern design. Codé from Scratch
+              en TypeScript et en Sass, sans l'aide de moteur de jeu.
             </p>
             <a
               aria-label="view item"
@@ -1263,12 +1263,12 @@ onMounted(() => {
 })
 
 const testEnter = (event) => {
-  console.log(event.target.children[1])
-  event.target.children[1].style.display = 'none'
+  console.log(event.target.firstChild.children[2].firstChild)
+  event.target.firstChild.children[1].firstChild.style.display = 'none'
 }
 
 const displayP = (event) => {
-  event.target.children[1].style.display = 'block'
+  event.target.firstChild.children[1].firstChild.style.display = 'flex'
 }
 
 // const handleClick = (event) => {

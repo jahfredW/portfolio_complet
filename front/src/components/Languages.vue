@@ -133,7 +133,7 @@
         alt="Logo de c-sharp"
       />
       <div class="flex flex-col items-center">
-        <p class="text-lg font-bold opacity-0">Lua</p>
+        <p class="text-lg font-bold opacity-0">C-sharp</p>
       </div>
     </div>
     <div
