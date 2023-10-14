@@ -741,7 +741,7 @@
       <div
         ref="projets1"
         id="projets1"
-        class="w-full md:w-full lg:w-full relative grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 mx-auto"
+        class="w-full md:w-full lg:w-full relative grid gap-6 row-gap-5 mb-8 grid-cols-1 md:grid-cols-3 row-gap-6 grid-cols-1 mx-auto"
       >
         <div
           class="relative overflow-hidden rounded"
@@ -752,7 +752,7 @@
         >
           <img
             class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/images/npp-cover.png"
+            src="/assets/snap.png"
             alt="image de présentation de snaparadise"
           />
           <div
@@ -808,7 +808,7 @@
           }"
         >
           <img
-            class="object-fit w-full h-56 md:h-64 xl:h-80"
+            class="object-fill w-full h-56 md:h-64 xl:h-80"
             src="/assets/1942.png"
             alt="image de présentation de snaparadise"
           />
@@ -930,96 +930,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 1947 -->
-      </div>
-
-      <div
-        v-if="showProject2"
-        ref="projets2"
-        id="projets2"
-        class="w-full absolute grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2"
-      >
-        <!-- <div v-if="showProject2" ref="projets2" id="projets2" class="w-full absolute grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2 justify-center"> -->
-
-        <div
-          class="relative overflow-hidden rounded"
-          :class="{
-            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
-              isDesktop
-          }"
-        >
-          <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/images/scrappy.png"
-            alt="scrappy"
-          />
-          <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
-            :class="{
-              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
-            }"
-          >
-            <p class="mb-4 text-lg font-bold text-gray-100">&lt Scrappy Cooker /&gt</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-5">
-              Il s'agit d'une petite application anti-gaspi de scrapping, codée en python, qui
-              permet de concevoir des recettes de cuisine avec ce qu'il vous reste dans le
-              réfrigérateur ! ;)
-            </p>
-            <a
-              href="https://github.com/jahfredW/cooking_project_v2"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >Lien github</a
-            >
-            <!-- <p class="text-xs tracking-wide text-gray-300">
-                Le Backend est codé en Python, les repuêtes en API sont gérées avec FastApi tandis que le front est mis en place avec VueJs
-              </p> -->
-          </div>
-        </div>
-
-        <div
-          class="relative overflow-hidden rounded"
-          :class="{
-            'transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl':
-              isDesktop
-          }"
-        >
-          <img
-            class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/obr.png"
-            alt="scrappy"
-          />
-          <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
-            :class="{
-              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
-            }"
-          >
-            <p class="mb-4 text-lg font-bold text-gray-100">&lt OBR-plomberie /&gt</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
-              Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
-              prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
-            </p>
-            <a
-              aria-label="View Item"
-              href="https://obr-plomberie.fr"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
-              >Voir le site</a
-            >
-            <a
-              aria-label="View Item"
-              href="https://github.com/jahfredW/obr"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
-              >Lien Github</a
-            >
-            <!-- <p class="text-xs tracking-wide text-gray-300 ">
-                Nicolas Peltier Photographie sera le premier à en bénéficier
-              </p> -->
-          </div>
-        </div>
         <div
           class="relative overflow-hidden rounded"
           :class="{
@@ -1062,32 +972,45 @@
         >
           <img
             class="object-cover w-full h-56 md:h-64 xl:h-80"
-            src="/assets/codingame.svg"
+            src="/assets/obr.png"
             alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
             :class="{
-              'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
-                isDesktop
+              'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
             }"
           >
-            <p class="mb-4 text-lg font-bold text-gray-100">&lt CodinGame /&gt</p>
-            <p class="text-sm tracking-wide text-gray-300 mb-4">
-              Je vous parle des puzzles que j'ai pu réussir, ainsi que de ma certification Python.
+            <p class="mb-4 text-lg font-bold text-gray-100">&lt OBR-plomberie /&gt</p>
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
+              Il s'agit d'un site vitrine pour un plombier, avec des features spécifiques comme la
+              prise de rendez vous en ligne ainsi que l'implémentation d'un mailer.
             </p>
             <a
-              href="https://www.codingame.com/profile/f2a708aef3b3e45220e3bda15f3f064f5107834"
+              aria-label="View Item"
+              href="https://obr-plomberie.fr"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2"
-              >Lien vers Codingame</a
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mb-2"
+              >Voir le site</a
             >
+            <a
+              aria-label="View Item"
+              href="https://github.com/jahfredW/obr"
+              target="_blank"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
+              >Lien Github</a
+            >
+            <!-- <p class="text-xs tracking-wide text-gray-300 ">
+                Nicolas Peltier Photographie sera le premier à en bénéficier
+              </p> -->
           </div>
         </div>
+
+        <!-- 1947 -->
       </div>
     </div>
 
-    <div class="text-center">
+    <!-- <div class="text-center">
       <button
         @click="test"
         ref="seeMore"
@@ -1095,7 +1018,7 @@
       >
         Voir plus +
       </button>
-    </div>
+    </div> -->
   </div>
 
   <!-- technos -->
