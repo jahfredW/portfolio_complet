@@ -828,14 +828,23 @@
               aria-label="view item"
               href="https://1942.fredgruwedev.com"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-5 mr-5"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
               >Tester le jeu</a
             >
+            <a>
+              <router-link
+                :to="{ name: '1942' }"
+                aria-label="En savoir plus"
+                title="En savoir Plus"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-green-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
+                >En savoir Plus</router-link
+              >
+            </a>
             <a
               aria-label="View Item"
               href="https://github.com/jahfredW/1947"
               target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2"
               >Lien Github</a
             >
             <!-- <p class="text-xs tracking-wide text-gray-300 ">
@@ -1154,6 +1163,7 @@ import Others from './Others.vue'
 import ContactForm from './SimpleContact.vue'
 
 import { checkScreenSize } from '../composables/screen'
+import { initFlowbite } from 'flowbite'
 
 const frameworks_show = ref(false)
 const languages_show = ref(false)
@@ -1176,6 +1186,9 @@ onMounted(() => {
     observer.observe(languages.value)
     observer.observe(frameworks.value)
   }
+
+  initFlowbite()
+
   // if (blue_expand_1.value) {
   //   observer.observe(blue_expand_1.value)
   //   observer.observe(blue_expand_2.value)
