@@ -756,7 +756,7 @@
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-80"
             :class="{
               'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
             }"
@@ -776,9 +776,20 @@
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-pink-400 hover:cursor-pointer mt-5"
               >Voir le site</a
             >
-            <div class="flex flex-row">
+
+            <a>
+              <router-link
+                :to="{ name: 'snaparadise' }"
+                aria-label="En savoir plus"
+                title="En savoir Plus"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-green-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
+                >En savoir Plus</router-link
+              >
+            </a>
+
+            <!-- <div class="flex flex-row">
               <p
-                class="flex items-center font-semibold text-pink-400 hover:text-pink-800 mt-5 mr-3"
+                class="flex items-center font-semibold text-pink-400 hover:text-pink-800 mt-2 mr-3"
               >
                 Github :
               </p>
@@ -786,17 +797,17 @@
                 aria-label="view item"
                 href="https://github.com/jahfredW/npp_front_06"
                 target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5 mr-5"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2 mr-5"
                 >Front</a
               >
               <a
                 aria-label="view item"
                 href="https://github.com/jahfredW/npp_back_end_06"
                 target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-5"
+                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2"
                 >Back</a
               >
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -813,7 +824,7 @@
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-70"
             :class="{
               'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
                 isDesktop
@@ -840,16 +851,7 @@
                 >En savoir Plus</router-link
               >
             </a>
-            <a
-              aria-label="View Item"
-              href="https://github.com/jahfredW/1947"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2"
-              >Lien Github</a
-            >
-            <!-- <p class="text-xs tracking-wide text-gray-300 ">
-                Nicolas Peltier Photographie sera le premier à en bénéficier
-              </p> -->
+            
           </div>
         </div>
         <div
@@ -865,7 +867,7 @@
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-70"
             :class="{
               'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
             }"
@@ -901,7 +903,7 @@
             alt="image de présentation de snaparadise"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-70"
             :class="{
               'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
                 isDesktop
@@ -952,7 +954,7 @@
             alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-90"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-70"
             :class="{
               'transition-opacity duration-200 bg-black bg-opacity-90 opacity-0 hover:opacity-100':
                 isDesktop
@@ -985,7 +987,7 @@
             alt="scrappy"
           />
           <div
-            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-95"
+            class="absolute inset-0 px-6 py-4 bg-black bg-opacity-70"
             :class="{
               'transition-opacity duration-200 opacity-0 hover:opacity-100': isDesktop
             }"

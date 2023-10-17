@@ -16,23 +16,26 @@
     </h2>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div class="flex flex-col justify-center items-center p-3 mt-y">
-      <div class="flex justify-center w-full">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-3">
+    <div class="flex flex-col justify-around items-center mt-5">
+      <div class="flex flex-col justify-center items-center w-full">
         <video class="w-full md:w-3/4" controls>
           <source
             src="https://drive.google.com/uc?id=1Wd67wGEc4j967smMaaWjEaRhkOs8qMuu"
             type="video/mp4"
           />
         </video>
+        <div class="text-center mt-2">Cliquez pour voir la vidéo de présentation</div>
       </div>
 
-      <div class="text-center">Cliquez pour voir la vidéo de présentation</div>
-    </div>
+      
 
-    <div class="flex flex-col m-5 p-3">
+    </div>
+    
+
+    <div class="flex flex-col">
       <hr class="my-10 border-gray-300" />
-      <div class="my-auto">
+      <div class="my-auto text-center md:text-left">
         <p>
           1942 est un jeu de tir codé from Scratch. J'ai essentiellement utilisé la Programmation
           Orientée Objet en y implémentant plusieurs design pattern, dont le SingleTon, le Factory
@@ -46,13 +49,23 @@
           le gyroscope sur mobile )
         </p>
         <br />
-        <a
+        <div class="flex justify-evenly mt-5">
+          <a
           aria-label="view item"
           href="https://1942.fredgruwedev.com"
           target="_blank"
-          class="text-xl justify-center flex font-bold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-5 mr-5"
+          class="text-xl justify-center flex font-bold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
           >Tester le jeu</a
         >
+        <a
+              aria-label="View Item"
+              href="https://github.com/jahfredW/1947"
+              target="_blank"
+              class="text-xl flex items-center justify-center font-bold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer"
+              >Lien Github</a
+            >
+        </div>
+   
       </div>
     </div>
   </div>
@@ -173,28 +186,6 @@ const dart = ref(null)
 const lua = ref(null)
 const csharp = ref(null)
 const typScript = ref(null)
-
-// onMounted( () => {
-
-//     php.value.style.transform = 'translateX(-500%)';
-//     js.value.style.transform = 'translateY(-500%)';
-//     python.value.style.transform = 'translateY(-500%) translateX(+200%)';
-//     c.value.style.transform = 'translateY(-500%) translateX(+400%)';
-//     cplus.value.style.transform = 'translateX(-500%) translateY(+500%)';
-//     html.value.style.transform = 'translateX(-500%) translateY(+700%)';
-//     css.value.style.transform = 'translateY(+700%)';
-//     dart.value.style.transform = 'translateX(+500%) translateY(+700%)';
-
-//     gsap.to(python.value, { duration : 2, x: 0, y: 0, ease: "power3.out" })
-//     gsap.to(js.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.4 })
-//     gsap.to(php.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-//     gsap.to(c.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-//     gsap.to(cplus.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-//     gsap.to(html.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-//     gsap.to(css.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-//     gsap.to(dart.value, { duration : 2, x: 0, y: 0, ease: "elastic.out",  delay: 0.2 })
-
-// })
 
 onMounted(() => {
   const elementsToAnimate = [
