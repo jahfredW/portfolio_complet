@@ -762,52 +762,21 @@
             }"
           >
             <p class="mb-2 sm:mb-4 text-lg font-bold text-gray-100">&lt SNAPARADISE /&gt</p>
-            <p class="text-xs md:text-sm tracking-wide text-gray-300 sm:mb-4">
+            <p class="text-xs md:text-sm tracking-wide text-gray-300 mb-4">
               Dernier projet en date, actuellement en cours de développement. Il s'agit d'un
               marketPlace destiné à la vente de photographies.
             </p>
             <!-- <p class="text-xs tracking-wide text-gray-300 ">
                 Nicolas Peltier Photographie sera le premier à en bénéficier
               </p> -->
-            <a
-              aria-label="view item"
-              href="https://snaparadise.com"
-              target="_blank"
-              class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-pink-400 hover:cursor-pointer mt-5"
-              >Voir le site</a
+
+            <router-link
+              :to="{ name: 'snaparadise' }"
+              aria-label="En savoir plus"
+              title="En savoir Plus"
+              class="relative flex items-center font-semibold transition-colors duration-200 text-green-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
+              >En savoir Plus</router-link
             >
-
-            <a>
-              <router-link
-                :to="{ name: 'snaparadise' }"
-                aria-label="En savoir plus"
-                title="En savoir Plus"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-green-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
-                >En savoir Plus</router-link
-              >
-            </a>
-
-            <!-- <div class="flex flex-row">
-              <p
-                class="flex items-center font-semibold text-pink-400 hover:text-pink-800 mt-2 mr-3"
-              >
-                Github :
-              </p>
-              <a
-                aria-label="view item"
-                href="https://github.com/jahfredW/npp_front_06"
-                target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2 mr-5"
-                >Front</a
-              >
-              <a
-                aria-label="view item"
-                href="https://github.com/jahfredW/npp_back_end_06"
-                target="_blank"
-                class="relative flex items-center font-semibold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2"
-                >Back</a
-              >
-            </div> -->
           </div>
         </div>
 
@@ -835,13 +804,13 @@
               Shooter en cours de développement qui implémente des pattern design. Codé from Scratch
               en TypeScript et en Sass, sans l'aide de moteur de jeu.
             </p>
-            <a
+            <!-- <a
               aria-label="view item"
               href="https://1942.fredgruwedev.com"
               target="_blank"
               class="relative flex items-center font-semibold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer mt-2 mr-5"
               >Tester le jeu</a
-            >
+            > -->
             <a>
               <router-link
                 :to="{ name: '1942' }"
@@ -851,7 +820,6 @@
                 >En savoir Plus</router-link
               >
             </a>
-            
           </div>
         </div>
         <div

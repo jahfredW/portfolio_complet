@@ -27,11 +27,7 @@
         </video>
         <div class="text-center mt-2">Cliquez pour voir la vidéo de présentation</div>
       </div>
-
-      
-
     </div>
-    
 
     <div class="flex flex-col">
       <hr class="my-10 border-gray-300" />
@@ -51,21 +47,20 @@
         <br />
         <div class="flex justify-evenly mt-5">
           <a
-          aria-label="view item"
-          href="https://1942.fredgruwedev.com"
-          target="_blank"
-          class="text-xl justify-center flex font-bold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
-          >Tester le jeu</a
-        >
-        <a
-              aria-label="View Item"
-              href="https://github.com/jahfredW/1947"
-              target="_blank"
-              class="text-xl flex items-center justify-center font-bold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer"
-              >Lien Github</a
-            >
+            aria-label="view item"
+            href="https://1942.fredgruwedev.com"
+            target="_blank"
+            class="text-xl justify-center flex font-bold transition-colors duration-200 text-blue-accent-700 hover:text-deep-purple-800 hover:cursor-pointer"
+            >Tester le jeu</a
+          >
+          <a
+            aria-label="View Item"
+            href="https://github.com/jahfredW/1947"
+            target="_blank"
+            class="text-xl flex items-center justify-center font-bold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer"
+            >Lien Github</a
+          >
         </div>
-   
       </div>
     </div>
   </div>
