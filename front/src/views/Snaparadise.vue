@@ -1,3 +1,79 @@
+<script setup>
+import { initFlowbite } from 'flowbite'
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite()
+})
+
+const php = ref(null)
+const js = ref(null)
+const c = ref(null)
+const html = ref(null)
+const css = ref(null)
+const symfony = ref(null)
+const vue = ref(null)
+
+onMounted(() => {
+  const elementsToAnimate = [
+    php.value,
+    js.value,
+    symfony.value,
+    c.value,
+    vue.value,
+    html.value,
+    css.value
+  ]
+
+  elementsToAnimate.forEach((element, index) => {
+    // Déplacer les éléments en dehors de l'écran pour les masquer
+    gsap.set(element, { x: -500, y: -800 })
+
+    // Animer les éléments vers leur position finale (0, 0)
+    gsap.to(element, {
+      duration: 0.5,
+      x: 0,
+      y: 0,
+      ease: 'power4',
+      delay: 0.1 * index // Chaque élément commence après le précédent
+    })
+  })
+})
+
+// const show_text = (event) => {
+//     gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1.2, ease: "elastic.out"});
+//     const text = event.target.children[1].children[0];
+//     event.target.style.transform = 'scale(1.2)';
+//     event.target.style.cursor= 'pointer';
+//     console.log(text);
+//     text.style.opacity = "100";
+//     text.style.transition = 'opacity 2s ease';
+
+// }
+
+// const hide_text = (event) => {
+//     gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1, ease: "elastic.out" });
+//     const text = event.target.children[1].children[0];
+//     text.style.opacity = "0";
+//     text.style.transition = 'opacity 2s ease';
+// }
+
+const show_text = (event) => {
+  gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1.2, ease: 'elastic.out' })
+  const text = event.target.children[1].children[0]
+  gsap.to(text, { duration: 2, opacity: 1, ease: 'ease-in-out' })
+  event.target.style.cursor = 'pointer'
+}
+
+const hide_text = (event) => {
+  gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1, ease: 'elastic.out' })
+  const text = event.target.children[1].children[0]
+  gsap.to(text, { duration: 2, opacity: 0, ease: 'ease-in-out' })
+}
+</script>
+
 <template>
   <div
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
@@ -33,8 +109,10 @@
       <div class="text-center mt-2 hidden">Cliquez pour voir la vidéo de présentation</div>
     </div>
 
-    <div class="flex flex-row items-center">
-      <div class="pr-2">
+    <div class="flex flex-col md:flex-row items-center md:justify-evenly">
+      <div
+        class="pr-2 flex items-center pb-2 scale-100 hover:scale-110 transition-transform duration-200"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -49,53 +127,104 @@
             d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
           />
         </svg>
+        <div class="pl-2">
+          <a
+            aria-label="view item"
+            href="https://snaparadise.com"
+            target="_blank"
+            class="text-lg md:text-xl font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-pink-400 hover:cursor-pointer mt-5"
+            >Voir le site
+          </a>
+          <hr class="border-gray-300" />
+        </div>
       </div>
 
-      <div>
-        <a
-          aria-label="view item"
-          href="https://snaparadise.com"
-          target="_blank"
-          class="text-xl font-bold transition-colors duration-200 text-blue-accent-700 hover:text-pink-400 hover:cursor-pointer mt-5"
-          >Voir le site
-        </a>
-      </div>
-    </div>
-    <div class="flex">
-      <div class="flex items-end">
-        <div class="pr-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-            />
-          </svg>
-        </div>
-        <p class="flex items-center font-bold text-pink-400 hover:text-pink-800 mt-5">Github :</p>
-      </div>
-      <div class="flex items-end ml-2">
-        <a
-          aria-label="view item"
-          href="https://github.com/jahfredW/npp_front_06"
-          target="_blank"
-          class="font-bold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mr-1"
-          >Front /
-        </a>
-        <a
-          aria-label="view item"
-          href="https://github.com/jahfredW/npp_back_end_06"
-          target="_blank"
-          class="font-bold transition-colors duration-200 text-pink-400 hover:text-pink-800 hover:cursor-pointer mt-2"
-          >Back</a
+      <div
+        class="pr-2 flex items-center pb-2 scale-100 hover:scale-110 transition-transform duration-200"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
         >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+          />
+        </svg>
+
+        <div class="pl-2">
+          <a
+            aria-label="view item"
+            href="https://docs.google.com/document/d/1pp-_iR0wkXQ-wL5yPySZr28uC-tA-8q8/edit?usp=sharing&ouid=106405980938323453582&rtpof=true&sd=true"
+            target="_blank"
+            class="text-lg md:text-xl font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-pink-400 hover:cursor-pointer mt-5"
+            >Voir le dossier Projet
+          </a>
+          <hr class="border-gray-300" />
+        </div>
+      </div>
+      <div
+        class="pr-2 flex items-center pb-2 scale-100 hover:scale-110 transition-transform duration-200"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+          />
+        </svg>
+
+        <div class="pl-2">
+          <a
+            aria-label="view item"
+            href="https://snaparadise.com"
+            target="_blank"
+            class="text-lg md:text-xl font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-pink-400 hover:cursor-pointer mt-5"
+            >Github : FrontEnd
+          </a>
+          <hr class="border-gray-300" />
+        </div>
+      </div>
+      <div
+        class="pr-2 flex items-center scale-100 hover:scale-110 transition-transform duration-200"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+          />
+        </svg>
+
+        <div class="pl-2">
+          <a
+            aria-label="view item"
+            href="https://snaparadise.com"
+            target="_blank"
+            class="text-lg md:text-xl font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-pink-400 hover:cursor-pointer mt-5"
+            >Github: BackEnd
+          </a>
+          <hr class="border-gray-300" />
+        </div>
       </div>
     </div>
 
@@ -731,81 +860,20 @@
         <p class="text-lg font-bold opacity-0">VueJs</p>
       </div>
     </div>
+    <div
+      @mouseenter="show_text($event)"
+      @mouseleave="hide_text($event)"
+      class="flex flex-col items-center"
+    >
+      <img
+        ref="vue"
+        class="object-cover w-20 h-20 mb-2 rounded-full shadow"
+        src="/assets/php.svg"
+        alt="Person"
+      />
+      <div class="flex flex-col items-center">
+        <p class="text-lg font-bold opacity-0">Php</p>
+      </div>
+    </div>
   </div>
 </template>
-
-<script setup>
-import { initFlowbite } from 'flowbite'
-import { onMounted, ref } from 'vue'
-import { gsap } from 'gsap'
-
-// initialize components based on data attribute selectors
-onMounted(() => {
-  initFlowbite()
-})
-
-const php = ref(null)
-const js = ref(null)
-const c = ref(null)
-const html = ref(null)
-const css = ref(null)
-const symfony = ref(null)
-const vue = ref(null)
-
-onMounted(() => {
-  const elementsToAnimate = [
-    php.value,
-    js.value,
-    symfony.value,
-    c.value,
-    vue.value,
-    html.value,
-    css.value
-  ]
-
-  elementsToAnimate.forEach((element, index) => {
-    // Déplacer les éléments en dehors de l'écran pour les masquer
-    gsap.set(element, { x: -500, y: -800 })
-
-    // Animer les éléments vers leur position finale (0, 0)
-    gsap.to(element, {
-      duration: 0.5,
-      x: 0,
-      y: 0,
-      ease: 'power4',
-      delay: 0.1 * index // Chaque élément commence après le précédent
-    })
-  })
-})
-
-// const show_text = (event) => {
-//     gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1.2, ease: "elastic.out"});
-//     const text = event.target.children[1].children[0];
-//     event.target.style.transform = 'scale(1.2)';
-//     event.target.style.cursor= 'pointer';
-//     console.log(text);
-//     text.style.opacity = "100";
-//     text.style.transition = 'opacity 2s ease';
-
-// }
-
-// const hide_text = (event) => {
-//     gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1, ease: "elastic.out" });
-//     const text = event.target.children[1].children[0];
-//     text.style.opacity = "0";
-//     text.style.transition = 'opacity 2s ease';
-// }
-
-const show_text = (event) => {
-  gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1.2, ease: 'elastic.out' })
-  const text = event.target.children[1].children[0]
-  gsap.to(text, { duration: 2, opacity: 1, ease: 'ease-in-out' })
-  event.target.style.cursor = 'pointer'
-}
-
-const hide_text = (event) => {
-  gsap.to(event.target, { duration: 2, x: 0, y: 0, scale: 1, ease: 'elastic.out' })
-  const text = event.target.children[1].children[0]
-  gsap.to(text, { duration: 2, opacity: 0, ease: 'ease-in-out' })
-}
-</script>
