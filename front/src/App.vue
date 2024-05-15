@@ -178,16 +178,16 @@
             </a>
           </div>
         </div>
-        <div class="my-4 lg:max-w-sm">
+        <!-- <div class="my-4 lg:max-w-sm">
           <p class="text-sm text-center text-deep-purple-50">
             Ceci est un site vitrine, il ne représente en aucun cas une quelconque activité
             professionelle.
           </p>
-        </div>
+        </div> -->
       </div>
       <div class="pt-5 pb-10 border-t border-blue-200">
         <p class="text-sm text-center text-gray-100">
-          © Copyright 2023 FredGruweDev.com Inc. All rights reserved.
+          © Copyright 2024 FredGruweDev.com Inc. All rights reserved.
         </p>
       </div>
     </div>

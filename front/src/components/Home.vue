@@ -39,14 +39,17 @@
 
           <div v-if="isDesktop" class="col-span-4 flex justify-center items-center">
             <img
-              class="rounded-full shadow-lg md:h-96 h-64 myPhoto"
-              src="/assets/images/moi.jpg"
+              class="rounded-full shadow-lg md:h-96 h-64"
+              src="/assets/images/bogoss.jpg"
               alt="photo de profil"
             />
           </div>
           <div class="col-span-4 text-base md:text-lg flex flex-col justify-end">
             <div class="text-center text-white text-2xl font-bold">
-              &lt Concepteur - Développeur /&gt
+              &lt Développeur Fullstack /&gt
+            </div>
+            <div class="text-center text-white text-2xl font-bold">
+              &lt Développeur C# / COBOL /&gt
             </div>
           </div>
           <!-- <div>
@@ -70,7 +73,7 @@
   >
     <div class="grid gap-10 lg:grid-cols-2 flex-col justify-center">
       <div class="flex justify-center items-center">
-        <img class="rounded-full shadow-lg md:h-96 h-64" src="/assets/images/moi.jpg" alt="" />
+        <img class="rounded-full shadow-lg md:h-96 h-64" src="/assets/images/bogoss.jpg" alt="" />
       </div>
     </div>
   </div>
@@ -328,25 +331,45 @@
             <span class="inline-block text-blue-accent-700">à votre service</span>
           </h5>
           <p class="mb-6 text-gray-900">
-            De formation scientifique, j'ai exercé prendant vingt ans en laboratoire Technique et
-            Scientifique, au cours desquels j'ai occupé plusieurs postes à reponsabilité. Tout au
-            long de ce parcours j'ai été amené à me former en autodidacte sur le métier du
-            <strong>développement informatique</strong> ( processus d'automatisation et analyse de
-            données). J'ai ensuite consolidé mes
-            <span class="text-blue-accent-700"><strong>compétences</strong></span> en suivant le
-            programme <span class="text-blue-accent-700"><strong>Vivre du Code</strong></span
-            >, avant d'obtenir le titre pro de
+            Développeur analyste qualifié, titulaire des titres professionnels de
             <span class="text-blue-accent-700"
-              ><strong>Développeur Web et Web Mobile.</strong></span
+              ><strong>Développeur Web et Web Mobile </strong></span
             >
-          </p>
-          <p class="mb-6 text-gray-900">
-            Je suis actuellement en formation de
+            et de
             <span class="text-blue-accent-700"
               ><strong>Concepteur Développeur d'Applications.</strong></span
             >
           </p>
-          <!-- <p class="mb-6 text-gray-1200">Mon objectif final serait d'obtenir le titre d'expert Full Stack</p> -->
+          <p class="mb-6">
+            Je dispose d'une expérience de
+            <span class="text-blue-accent-700"
+              ><strong>Développeur Freelance Fullstack, </strong></span
+            >
+            avec la réalisation de projets comme
+            <span class="text-blue-accent-700"
+              ><strong><a href="https://nicolasPeltier.fr">SNAPARADISE</a></strong> </span
+            >, solution d'exposition et de vente de photographies destinée au photographes amateurs
+            et professionnels.
+          </p>
+          <p class="mb-6">
+            Je dispose également des solides compétences en
+            <span class="text-blue-accent-700"><strong>COBOL </strong></span>
+            en ayant eu la chance d'intégrer
+            <span class="text-blue-accent-700"
+              ><strong><a href="https://nicolasPeltier.fr">IBM</a></strong> </span
+            >, entreprise dans laquelle j'ai pu effectuer un stage de 6 mois dans cette technologie.
+          </p>
+          <p>
+            Cliquez sur the logo pour télécharger
+            <span class="text-blue-accent-700"><strong>mon CV:</strong></span>
+          </p>
+          <p
+            class="my-6 transform transition-transform duration-300 hover:scale-110 flex justify-center"
+          >
+            <a href="/assets/images/GRUWE_FREDERIC_CV.pdf" download>
+              <img src="/assets/images/capture_cv.png" alt="W3Schools" width="200" height="150" />
+            </a>
+          </p>
           <hr class="border-gray-300" />
         </div>
       </div>
